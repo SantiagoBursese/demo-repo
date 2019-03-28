@@ -8,5 +8,6 @@ public class main {
         usuario1.cargarSaldo(150);
         System.out.println("El saldo de la sube es " + usuario1.preguntarSaldo());
         System.out.println("Le agrego este print para probar el GIT");
+        System.out.println("Que onda nahu?");
     }
 }
