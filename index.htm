@@ -1,0 +1,3911 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width">
+
+  
+  <title>
+    HTML5 Page Structure | CSS-Tricks  </title>
+
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+  <meta property="fb:pages" content="124436167285">
+
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="CSS-Tricks Search">
+
+  <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://feeds.feedburner.com/CssTricks">
+
+  <link rel="preload" href="https://css-tricks.com/wp-content/themes/CSS-Tricks-17/fonts/Rubik-Bold-kern-latin.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="https://css-tricks.com/wp-content/themes/CSS-Tricks-17/fonts/Rubik-Regular-kern-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face {
+      font-family: Rubik;
+      src: 
+        url(https://css-tricks.com/wp-content/themes/CSS-Tricks-17/fonts/Rubik-Bold-kern-latin.woff2) format("woff2"),
+        url(https://css-tricks.com/wp-content/themes/CSS-Tricks-17/fonts/Rubik-Bold-kern-latin.woff) format("woff");
+      font-weight: 700;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: Rubik;
+      src: 
+        url(https://css-tricks.com/wp-content/themes/CSS-Tricks-17/fonts/Rubik-Regular-kern-latin.woff2) format("woff2"), 
+        url(https://css-tricks.com/wp-content/themes/CSS-Tricks-17/fonts/Rubik-Regular-kern-latin.woff) format("woff");
+      font-weight: 400;
+      font-display: swap;
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://css-tricks.com/wp-content/themes/CSS-Tricks-17/style.css?v=10.1">
+
+  
+  
+<!-- This site is optimized with the Yoast SEO plugin v10.0.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Your Website Your menu Article title Posted on September 4th 2009 by Writer - 6 comments Pellentesque habitant morbi tristique senectus et netus et"/>
+<link rel="canonical" href="https://css-tricks.com/snippets/html/html5-page-structure/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="HTML5 Page Structure | CSS-Tricks" />
+<meta property="og:description" content="Your Website Your menu Article title Posted on September 4th 2009 by Writer - 6 comments Pellentesque habitant morbi tristique senectus et netus et" />
+<meta property="og:url" content="https://css-tricks.com/snippets/html/html5-page-structure/" />
+<meta property="og:site_name" content="CSS-Tricks" />
+<meta property="article:publisher" content="https://www.facebook.com/CSSTricks" />
+<meta property="article:section" content="Article" />
+<meta property="og:image" content="https://css-tricks.com/wp-content/uploads/2014/03/css-tricks-star.png" />
+<meta property="og:image:secure_url" content="https://css-tricks.com/wp-content/uploads/2014/03/css-tricks-star.png" />
+<meta property="og:image:width" content="512" />
+<meta property="og:image:height" content="512" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Your Website Your menu Article title Posted on September 4th 2009 by Writer - 6 comments Pellentesque habitant morbi tristique senectus et netus et" />
+<meta name="twitter:title" content="HTML5 Page Structure | CSS-Tricks" />
+<meta name="twitter:site" content="@Real_CSS_Tricks" />
+<meta name="twitter:image" content="https://css-tricks.com/wp-content/uploads/2014/03/css-tricks-star.png" />
+<meta name="twitter:creator" content="@chriscoyier" />
+<script type='application/ld+json'>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://css-tricks.com/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"https://css-tricks.com/snippets/","name":"Code Snippets"}},{"@type":"ListItem","position":3,"item":{"@id":"https://css-tricks.com/snippets/html/","name":"HTML"}},{"@type":"ListItem","position":4,"item":{"@id":"https://css-tricks.com/snippets/html/html5-page-structure/","name":"HTML5 Page Structure"}}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="CSS-Tricks &raquo; HTML5 Page Structure Comments Feed" href="https://css-tricks.com/snippets/html/html5-page-structure/feed/" />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://css-tricks.com/wp-includes/css/dist/block-library/style.min.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='bbp-default-css'  href='https://css-tricks.com/wp-content/plugins/bbpress/templates/default/css/bbpress.css?ver=2.5.14-6684' type='text/css' media='screen' />
+<link rel='stylesheet' id='jetpack-search-widget-css'  href='https://css-tricks.com/wp-content/plugins/jetpack/modules/widgets/search/css/search-widget-frontend.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='social-logos-css'  href='https://css-tricks.com/wp-content/plugins/jetpack/_inc/social-logos/social-logos.min.css?ver=1' type='text/css' media='all' />
+<script  src='https://css-tricks.com/wp-content/themes/CSS-Tricks-17/js/libs/jquery-3.3.1.min.js'></script>
+<link rel='https://api.w.org/' href='https://css-tricks.com/wp-json/' />
+<link rel='shortlink' href='https://wp.me/P354tK-104' />
+<link rel="alternate" type="application/json+oembed" href="https://css-tricks.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcss-tricks.com%2Fsnippets%2Fhtml%2Fhtml5-page-structure%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://css-tricks.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcss-tricks.com%2Fsnippets%2Fhtml%2Fhtml5-page-structure%2F&#038;format=xml" />
+<!-- Better Art Direction Styles -->
+
+
+
+<link rel='dns-prefetch' href='//v0.wordpress.com'/>
+<style type='text/css'>img#wpstats{display:none}</style>
+</head>
+
+<body class="page-template page-template-page-snippet page-template-page-snippet-php page page-id-3848 page-child parent-pageid-3231" id="top">
+
+  <a id="skip-nav" class="skip-nav screen-reader-text" href="#maincontent">Skip to main content</a> 
+
+  <div id="top-of-site-pixel-anchor"></div>
+
+  <header class="site-header" id="site-header">
+
+  <div class="logo">
+    <a href="/">
+      <div class="screen-reader-text">CSS-Tricks</div>
+      <svg class="icon-logo-star" width="35px" height="35px">
+        <use xlink:href="#icon-logo-star"></use>
+      </svg>
+      <!-- 288 35 -->
+      <svg class="icon-logo-text" width="214px" height="35px">
+        <use xlink:href="#logo"></use>
+      </svg>
+    </a>
+  </div>
+
+  <div class="header-middle-area">
+
+    <nav class="main-nav" id="main-nav">
+
+  <ul class="main-sections">
+    <li class="articles">
+      <a href="/archives/">
+        <svg class="icon-nav-articles" width="26px" height="26px">
+          <use xlink:href="#icon-nav-articles"></use>
+        </svg>
+        <span>Articles</span>
+      </a>
+    </li>
+    <li class="videos">
+      <a href="/video-screencasts/">
+        <svg class="icon-nav-video" width="26px" height="26px">
+          <use xlink:href="#icon-nav-videos"></use>
+        </svg>
+        <span>Videos</span>
+      </a>
+    </li>
+    <li class="almanac">
+      <a href="/almanac/">
+        <svg class="icon-nav-almanac" width="26px" height="26px">
+          <use xlink:href="#icon-nav-almanac"></use>
+        </svg>
+        <span>Almanac</span>
+      </a>
+    </li>
+    <li class="snippets">
+      <a href="/snippets/">
+        <svg class="icon-nav-snippets" width="26px" height="26px">
+          <use xlink:href="#icon-nav-snippets"></use>
+        </svg>
+        <span>Snippets</span>
+      </a>
+    </li>
+    <li class="newsletter">
+      <a href="/newsletters/">
+        <svg class="icon-nav-newsletter" width="26px" height="26px">
+          <use xlink:href="#icon-nav-newsletter"></use>
+        </svg>
+        <span>Newsletter</span>
+      </a>
+    </li>
+    <li class="jobs">
+      <a href="/jobs/">
+        <svg class="icon-nav-jobs" width="26px" height="26px">
+          <use xlink:href="#icon-nav-jobs"></use>
+        </svg>
+        <span>Jobs</span>
+      </a>
+    </li>
+    <li class="guides">
+      <a href="/guides/">
+        <svg class="icon-nav-guides" width="26px" height="26px">
+          <use xlink:href="#icon-nav-guides"></use>
+        </svg>
+        <span>Guides</span>
+      </a>
+    </li>
+  </ul>
+
+  <hr class="squiggle">
+
+  <div class="mobile-other-nav">
+    <a href="#top">Back to Top</a>
+    <a href="/contact/">Contact</a>
+    <a href="/about/">About</a>
+    <a href="/archives/">Archives</a>
+    <a href="/advertising/">Advertise</a>
+    <a href="/jobs/">Jobs</a>
+    <a href="/license/">License</a>
+    <a href="/subscription-options/">Subscribe</a>
+    <a href="/forums/">Forums</a>
+    <a href="/guest-posting/">Guest Posting</a>
+  </div>
+
+  <div class="mobile-social">
+    <a href="https://www.facebook.com/CSSTricks/" class="social-link-facebook">
+       <span class="screen-reader-text">Facebook</span>
+       <svg class="logo-facebook" width="20px" height="20px">
+         <use xlink:href="#logo-facebook"></use>
+       </svg>
+    </a>
+
+    <a href="https://twitter.com/css" class="social-link-twitter">
+       <span class="screen-reader-text">Twitter</span>
+       <svg class="logo-twitter" width="20px" height="20px">
+         <use xlink:href="#logo-twitter"></use>
+       </svg>
+    </a>
+  
+    <a href="https://www.youtube.com/user/realcsstricks" class="social-link-youtube">
+       <span class="screen-reader-text">YouTube</span>
+       <svg class="logo-youtube" width="20px" height="20px">
+         <use xlink:href="#logo-youtube"></use>
+       </svg>
+    </a>
+
+    <a href="https://spectrum.chat/css-tricks" class="social-link-spectrum">
+       <span class="screen-reader-text">Spectrum</span>
+       <svg class="logo-spectrum" width="20px" height="20px">
+         <use xlink:href="#logo-spectrum"></use>
+       </svg>
+    </a>
+
+    <a href="https://css-tricks.com/feed/" class="social-link-rss">
+       <span class="screen-reader-text">RSS</span>
+       <svg class="logo-rss" width="20px" height="20px">
+         <use xlink:href="#logo-rss"></use>
+       </svg>
+    </a>
+  </div>
+
+</nav>
+  </div>
+
+  <div class="search" role="search" id="search-area">
+                  <div class="chw-widget"><form role="search" method="get" id="searchform" class="search-form" action="https://css-tricks.com/">
+
+  <label class="screen-reader-text" id="search-label" for="search-input">Search for:</label>
+
+  <input type="search" required name="s" id="search-input" class="search-field" placeholder="e.g. flexbox" value="">
+
+    <input type="hidden" name="orderby" value="relevance">
+  <input type="hidden" name="post_type" value="post,page,guide">
+
+  <button type="submit" class="button-search">
+    <span class="screen-reader-text">Search</span>
+    <svg class="icon-search" width="26px" height="26px">
+      <use xlink:href="#icon-search"></use>
+    </svg>
+  </button>
+
+</form></div>            </div>
+
+  <div class="mobile-actions" id="mobile-actions">
+
+    <button class="search-opener" id="search-opener">
+      <span class="screen-reader-text">Open Search</span>
+      <svg class="icon-search" width="26px" height="26px">
+        <use xlink:href="#icon-search"></use>
+      </svg>
+      <svg class="icon-search-close" width="26px" height="26px">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </button>
+
+    <button id="mobile-nav-button" class="mobile-nav-button">
+      <span class="screen-reader-text">Open Navigation</span>
+      <svg class="icon-burger" width="28px" height="28px">
+        <use xlink:href="#icon-burger"></use>
+      </svg>
+      <svg class="icon-close" width="28px" height="28px">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </button>
+
+  </div>
+  
+</header>
+
+      <div class="all-site-wrap" id="all-site-wrap">
+      
+<script>
+  var articleYear = 2009;
+  var articleAuthor = "3";
+  var articleType = "snippet";
+</script>
+
+<script>
+  var articleYear = 2009;
+</script>
+
+<main id="post-3848" class="instapaper_body h-entry e-content">
+
+  <article>
+
+    <header class="header-breadcrumbs header-with-bottom-gradient" id="maincontent">
+
+  <div class="header-breadcrumbs-inside">
+
+    <span><span><span><a href="https://css-tricks.com/" >Home</a> <span class="breadcrumb-separator">/</span> <span><a href="https://css-tricks.com/snippets/" >Code Snippets</a> <span class="breadcrumb-separator">/</span> <span><a href="https://css-tricks.com/snippets/html/" >HTML</a> <span class="breadcrumb-separator">/</span> <span class="breadcrumb_last">HTML5 Page Structure</span></span></span></span></span></span>
+    <h1 class="screen-reader">
+      HTML5 Page Structure    </h1>
+    
+    <div class="article-content-meta">
+
+     <div class="author-avatar">
+    <a href="https://css-tricks.com/author/chriscoyier/">
+      <img alt='Photo of Chris Coyier' src='https://secure.gravatar.com/avatar/8081b26e05bb4354f7d65ffc34cbbd67?s=80&#038;d=retro&#038;r=pg' srcset='https://secure.gravatar.com/avatar/8081b26e05bb4354f7d65ffc34cbbd67?s=160&#038;d=retro&#038;r=pg 2x' class='avatar avatar-80 photo' height='80' width='80' />    </a>
+    <svg class="half-circle" width="80px" height="80px">
+      <use xlink:href="#half-circle"></use>
+    </svg>
+  </div>
+
+  <div class="author-name-area">
+    <div class="author-name-prefix">
+      Author
+    </div>
+    <a class="author-name" href="https://css-tricks.com/author/chriscoyier/">
+      Chris Coyier    </a>
+  </div>
+
+  <div class="article-comments-meta">
+    <div class="comments-prefix">
+      86 Comments    </div>
+    <a class="comments-link" href="https://css-tricks.com/snippets/html/html5-page-structure/#comments">
+                        Join the Conversation
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
+<path d="M7 12.5L23 12.5" stroke="url(#paint0_linear)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1 12.5H2" stroke="url(#paint1_linear)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.5 7L23 12.5L17.5 18" stroke="url(#paint2_linear)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear" x1="10.7498" y1="12.5" x2="11.3447" y2="9.73465" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF8A00"/>
+<stop offset="1" stop-color="#DA1B60"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="1.23436" y1="12.5" x2="2.00945" y2="12.2748" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF8A00"/>
+<stop offset="1" stop-color="#DA1B60"/>
+</linearGradient>
+<linearGradient id="paint2_linear" x1="18.789" y1="17.9995" x2="23.3162" y2="17.3419" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF8A00"/>
+<stop offset="1" stop-color="#DA1B60"/>
+</linearGradient>
+</defs>
+</svg>
+    </a>
+  </div>
+  
+      <div class="created">
+      <div class="created-prefix">
+        Published
+      </div>
+      <time datetime="">
+        Sep 4, 2009      </time>
+    </div>
+
+        <div class="updated">
+      <div class="updated-prefix">
+        Updated
+      </div>
+      <time datetime="">
+        Dec 19, 2009      </time>
+    </div>
+      
+</div>
+    
+  </div>
+
+</header>
+
+<div class="header-gradient-after">
+  <div class="header-gradient-content">
+    <div class="header-gradient-content-inside">
+
+      <div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-3848" class="share-twitter sd-button no-icon" href="https://css-tricks.com/snippets/html/html5-page-structure/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-3848" class="share-facebook sd-button no-icon" href="https://css-tricks.com/snippets/html/html5-page-structure/?share=facebook" target="_blank" title="Click to share on Facebook"><span>Facebook</span></a></li><li class="share-end"></li></ul></div></div></div>
+              <div class="bold-underline-links header-gradient-sponsor">
+          <p>
+  Create your own website with <a href="https://synd.co/2XurS24">Wix.com</a>
+</p>        </div>
+      
+    </div>
+  </div>
+</div>
+    <div class="page-wrap on-light">
+
+      <div class="article-and-sidebar single-snippet-content">
+
+        <div class="article-content">
+
+          <pre><code class="html">&lt;!DOCTYPE HTML&gt;
+
+&lt;html&gt;
+
+&lt;head&gt;
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+	&lt;title&gt;Your Website&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+	&lt;header&gt;
+		&lt;nav&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Your menu&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/nav&gt;
+	&lt;/header&gt;
+	
+	&lt;section&gt;
+	
+		&lt;article&gt;
+			&lt;header&gt;
+				&lt;h2&gt;Article title&lt;/h2&gt;
+				&lt;p&gt;Posted on &lt;time datetime="2009-09-04T16:31:24+02:00"&gt;September 4th 2009&lt;/time&gt; by &lt;a href="#"&gt;Writer&lt;/a&gt; - &lt;a href="#comments"&gt;6 comments&lt;/a&gt;&lt;/p&gt;
+			&lt;/header&gt;
+			&lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.&lt;/p&gt;
+		&lt;/article&gt;
+		
+		&lt;article&gt;
+			&lt;header&gt;
+				&lt;h2&gt;Article title&lt;/h2&gt;
+				&lt;p&gt;Posted on &lt;time datetime="2009-09-04T16:31:24+02:00"&gt;September 4th 2009&lt;/time&gt; by &lt;a href="#"&gt;Writer&lt;/a&gt; - &lt;a href="#comments"&gt;6 comments&lt;/a&gt;&lt;/p&gt;
+			&lt;/header&gt;
+			&lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.&lt;/p&gt;
+		&lt;/article&gt;
+		
+	&lt;/section&gt;
+
+	&lt;aside&gt;
+		&lt;h2&gt;About section&lt;/h2&gt;
+		&lt;p&gt;Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.&lt;/p&gt;
+	&lt;/aside&gt;
+
+	&lt;footer&gt;
+		&lt;p&gt;Copyright 2009 Your name&lt;/p&gt;
+	&lt;/footer&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+        </div>
+
+        <aside class="entry-unrelated sidebar">
+
+  
+      <div id="all-ads"></div>
+  
+</aside>
+
+      </div>
+
+  </div>
+
+  </article>
+
+</main>
+
+<div class="related-ads-comments-wrap">
+  <div class="related-ads-comments">
+          <div class="related-posts">
+  
+
+<!-- Jetpack Related Posts is not supported in this context. -->
+
+</div>      <div class="end-of-article-ads">
+
+      <div class="bsap-doubles side-by-side">
+
+      <div id="bsap_1250418" class="bsarocks bsap_3469a2a501a9e18091036aa0c89f9dcb"></div>
+
+    </div>
+  
+</div>
+
+<section class="respond-area">
+
+  
+    <h2 class="comments-title" id="comments">
+      Comments
+    </h2>
+
+    <ol id="featured-comments-list" class="commentlist featured-comments-list"></ol>
+
+    <ol class="commentlist" id="commentlist">
+      
+    <li class="comment even thread-even depth-1" id="li-comment-61118">
+
+      <div class="comment-wrap" id="comment-61118">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/5d484f9c0c5ce369a43ee85b5ae0c81a?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">haRacz</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-61118"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2009-09-09T02:58:46-07:00">September 9, 2009</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>And where is charset ?</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-61118' data-commentid="61118" data-postid="3848" data-belowelement="comment-61118" data-respondelement="respond" aria-label='Reply to haRacz'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  <ul class="children">
+
+    <li class="comment odd alt depth-2" id="li-comment-85348">
+
+      <div class="comment-wrap" id="comment-85348">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/805d8f269a336a136cf8635cd211f28e?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Richard</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-85348"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2010-11-16T05:04:00-07:00">November 16, 2010</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>It is there but as a meta tag&#8230; Simplified.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even depth-2" id="li-comment-1584296">
+
+      <div class="comment-wrap" id="comment-1584296">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/c4bc916cb244a480d91cf5ac3260f3d3?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">darren chamberlain</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1584296"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2014-08-08T09:51:27-07:00">August 8, 2014</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>This is the wrong use of the section tag</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt depth-2" id="li-comment-1584725">
+
+      <div class="comment-wrap" id="comment-1584725">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/79d907734c8fb5e7eb00578404d5ff15?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Vipin</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1584725"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2014-08-26T00:37:45-07:00">August 26, 2014</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Whats wrong with section tag?</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even depth-2" id="li-comment-1594291">
+
+      <div class="comment-wrap" id="comment-1594291">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/0dfb392c42c351e00949779262ba4a9c?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">David</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1594291"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-05-06T07:02:06-07:00">May 6, 2015</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>The section attribute is not meant to include articles, more the other way around. See this example:<br />
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article" rel="nofollow">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article</a></p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt depth-2" id="li-comment-1597433">
+
+      <div class="comment-wrap" id="comment-1597433">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/c7b8d7590c2542836e1684f7281e918f?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">ulli</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1597433"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-10-10T06:56:19-07:00">October 10, 2015</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Well the use of <code>&lt;article&gt;</code> inside section is the right use&#8230; even in the link provided by Dave the example shows it that way&#8230; and than, what is ment to be and isn&#8217;t&#8230;<br />
+If you so please you can have <code>&lt;section&gt;</code> with <code>&lt;article&gt;</code> that contain their own sub <code>&lt;section&gt;</code> and the web site will still work propperly&#8230; just means that you structure your code differently&#8230;</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even depth-2" id="li-comment-1598120">
+
+      <div class="comment-wrap" id="comment-1598120">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/3e8b58e5ea043669f359dc16cad765f6?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">waqas</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1598120"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-11-19T08:16:23-07:00">November 19, 2015</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>some thing is wrong section tag</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt depth-2" id="li-comment-1598338">
+
+      <div class="comment-wrap" id="comment-1598338">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/05dc0e1c4e2dc4605830c68cbd0465cb?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">tylerptmusic</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1598338"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-11-29T22:42:54-07:00">November 29, 2015</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>To append to ulli&#8217;s comment: A &#8220;section&#8221; of content containing articles, and a &#8220;section&#8221; of content within an article containing either the body of the article, or anything else appended to it. In the case of the mozilla example, the section within the article contains reviews of the article, or reviews of the particular subject in question.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even depth-2" id="li-comment-1598734">
+
+      <div class="comment-wrap" id="comment-1598734">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/23873eb46c724a6e44f3f1799db231f7?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">CHarlie</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1598734"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-12-26T13:37:09-07:00">December 26, 2015</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <blockquote>
+<p>David<br />
+Permalink to comment# MAY 6, 2015<br />
+The section attribute is not meant to include articles, more the other way around. See this example:<br />
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article" rel="nofollow">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article</a>
+</p></blockquote>
+<p>That there in your answer is what&#8217;s wrong: mozilla as your source of information. Generally, the section element is okay as posted in this entry.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt depth-2" id="li-comment-1601623">
+
+      <div class="comment-wrap" id="comment-1601623">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/75c79e7100f4460fe05ed2c0d1b74c83?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Mateusz</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1601623"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2016-05-19T00:40:33-07:00">May 19, 2016</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>@CHarlie: And what&#8217;s wrong with Mozilla as a source?</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-61380">
+
+      <div class="comment-wrap" id="comment-61380">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/4db1e840300d5c5fb60ba51bfced033e?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Mizou</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-61380"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2009-09-12T12:33:50-07:00">September 12, 2009</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Just a query about the double   inside the  and also where is the  ?<br />
+Thanks for your very clear &amp; useful website and I introduced my webdesign students to your video&#8217;s and they find it very helpful too.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-61380' data-commentid="61380" data-postid="3848" data-belowelement="comment-61380" data-respondelement="respond" aria-label='Reply to Mizou'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-61381">
+
+      <div class="comment-wrap" id="comment-61381">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/4db1e840300d5c5fb60ba51bfced033e?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Mizou</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-61381"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2009-09-12T12:39:51-07:00">September 12, 2009</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Hmm it looks like the code I wrote did not come up in the text, so I try it again and hope it will be rendered ok:</p>
+<p>I was wondering about the double &lt;p&gt; &lt;p&gt; inside the &lt;article&gt; ?<br />
+&#8230; and also where is the &lt;h1&gt; ?</p>
+<p>Thanks</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-61381' data-commentid="61381" data-postid="3848" data-belowelement="comment-61381" data-respondelement="respond" aria-label='Reply to Mizou'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  <ul class="children">
+
+    <li class="comment even depth-2" id="li-comment-163230">
+
+      <div class="comment-wrap" id="comment-163230">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/edc0c567d445e57727637e2e7906b908?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Mahendra</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-163230"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2012-04-05T00:41:58-07:00">April 5, 2012</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>How can we create html 5 page for Android is there ay specific tag.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-69688">
+
+      <div class="comment-wrap" id="comment-69688">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/17b2e81acc4b6fe85b41952254771dc8?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Helen</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-69688"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2010-02-09T08:30:50-07:00">February 9, 2010</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Some page don&#8217;t look like a little girl&#8217;s blog. They have one piece of article but several navs and asides. Keep using xhtml-strict and use roles and titles!</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-69688' data-commentid="69688" data-postid="3848" data-belowelement="comment-69688" data-respondelement="respond" aria-label='Reply to Helen'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-even depth-1" id="li-comment-75954">
+
+      <div class="comment-wrap" id="comment-75954">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/1161094e17e80b39c7a8070f93e426b4?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Chris Radford</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-75954"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2010-05-12T12:59:35-07:00">May 12, 2010</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Isn&#8217;t there a new deffinition for the charset meta tag in the html5 spec? i.e. </p>
+<pre>&lt;meta charset="UTF-8"></pre>
+<p>*just googled it and found an <a href="http://oli.jp/2009/html5-charset/" rel="nofollow">answer</a>. (yes was the short answer).</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-75954' data-commentid="75954" data-postid="3848" data-belowelement="comment-75954" data-respondelement="respond" aria-label='Reply to Chris Radford'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-76297">
+
+      <div class="comment-wrap" id="comment-76297">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/664e9bfc76df09b839e730bcfc72207e?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Ant</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-76297"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2010-05-19T01:20:35-07:00">May 19, 2010</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>I am just thinking about nav tag, is it really necessary? I never used div#nav&gt;ul structure, instead ul#nav.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-76297' data-commentid="76297" data-postid="3848" data-belowelement="comment-76297" data-respondelement="respond" aria-label='Reply to Ant'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-even depth-1" id="li-comment-80072">
+
+      <div class="comment-wrap" id="comment-80072">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/c4c5d9c8611d1921f62999d51db005c1?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Kelly Copley</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-80072"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2010-07-10T14:58:53-07:00">July 10, 2010</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>For charset the specs actually offer 3 methods..</p>
+<p>1. transport level content-type header.<br />
+2. new charset meta tag<br />
+3. Unicode byte order mark</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-80072' data-commentid="80072" data-postid="3848" data-belowelement="comment-80072" data-respondelement="respond" aria-label='Reply to Kelly Copley'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-80862">
+
+      <div class="comment-wrap" id="comment-80862">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/a4cfbdbbdf041d2c4272112ddae45a2d?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Eugene</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-80862"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2010-07-27T23:57:41-07:00">July 27, 2010</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Without a style it will look like ordinary text or &#8230;?</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-80862' data-commentid="80862" data-postid="3848" data-belowelement="comment-80862" data-respondelement="respond" aria-label='Reply to Eugene'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-even depth-1" id="li-comment-82719">
+
+      <div class="comment-wrap" id="comment-82719">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/ab4c78767b91c6bb79573cde1bdd61f8?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">zzzzBov</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-82719"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2010-09-03T13:07:20-07:00">September 3, 2010</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>That&#8217;s a nice syntax for documents.  For webpages you ought to place the navigation after the content for accessibility purposes.</p>
+<p>consider instead:<br />
+<code><br />
+&lt;header&gt;<br />
+...<br />
+&lt;/header&gt;<br />
+&lt;section&gt;<br />
+...<br />
+&lt;/section&gt;<br />
+&lt;nav&gt;<br />
+...<br />
+&lt;/nav&gt;<br />
+&lt;footer&gt;<br />
+...<br />
+&lt;/footer&gt;<br />
+</code></p>
+<p>You can still make the nav appear in the header of the page (or wherever else you want) using CSS, but when a blind user reads the page with a screen reader, they won&#8217;t be affronted with the long list of links until after they&#8217;re finished reading the content of the page.</p>
+<p>Additionally, when drop-down menus are used they will appear over embedded content (rather than hiding under) due to their lower location in the DOM.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-82719' data-commentid="82719" data-postid="3848" data-belowelement="comment-82719" data-respondelement="respond" aria-label='Reply to zzzzBov'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  <ul class="children">
+
+    <li class="comment odd alt depth-2" id="li-comment-192019">
+
+      <div class="comment-wrap" id="comment-192019">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/5a2e1c53b884e3f8c013273ea6b19697?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Gregg</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-192019"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2012-09-17T05:03:54-07:00">September 17, 2012</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Thanks for the explanation; I never would have considered that. Very helpful.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even depth-2" id="li-comment-1592530">
+
+      <div class="comment-wrap" id="comment-1592530">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/27156a00138d4f99d6edb350e3bb9a75?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Ty Strong</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1592530"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-02-12T01:08:30-07:00">February 12, 2015</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Not Quite! You can put it at the top of the page. Check out the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav" rel="nofollow">The MDN Specs</a>.</p>
+<blockquote><p>
+  User agents, such as screen readers targeting disabled users, can use this element to determine whether to omit the initial rendering of this content.
+</p></blockquote>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-89274">
+
+      <div class="comment-wrap" id="comment-89274">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/4e397cf6c6b8596465600a2bc51fb780?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">El garch Hicham</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-89274"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2011-02-25T08:43:03-07:00">February 25, 2011</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Thanks for the post,  you did a great job :D</p>
+<p>what i&#8217;m asking is there is possibility to make Internet explorer (6,7 and other<br />
+versions)  understand the HTML 5, a js hack for example.</p>
+<p>I work for a web compagny and websites we create should be well displayed and accessible in also in IE .</p>
+<p>If anyone has any suggesions please show me your ideas.<br />
+my GM: <a href="mailto:elgarch.hicham@gmail.com">elgarch.hicham@gmail.com</a></p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-89274' data-commentid="89274" data-postid="3848" data-belowelement="comment-89274" data-respondelement="respond" aria-label='Reply to El garch Hicham'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  <ul class="children">
+
+    <li class="comment even depth-2" id="li-comment-1586494">
+
+      <div class="comment-wrap" id="comment-1586494">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/a8d441235e9f32c5a0f56c50f76948cf?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">madhvik</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1586494"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2014-11-06T20:45:22-07:00">November 6, 2014</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>jst go to the url : <a href="https://github.com/aFarkas/html5shiv#html5shivjs" rel="nofollow">https://github.com/aFarkas/html5shiv#html5shivjs</a></p>
+<p>Download the html5shiv.js and include the below mentioned code into the head tag</p>
+<pre><code>     &lt;!--[if lt IE 9]&gt;--&gt;
+
+
+</code></pre>
+<p>It renders HTML5 element dynamically in the DOM and rules out the cross-browsr compatibility issues in IE6-8.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt depth-2" id="li-comment-1586495">
+
+      <div class="comment-wrap" id="comment-1586495">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/a8d441235e9f32c5a0f56c50f76948cf?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">madhvik</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1586495"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2014-11-06T20:50:55-07:00">November 6, 2014</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>After downloading the html5shiv.js  into the native js folder inside HTML, please use this into your  head tag;</p>
+<pre><code>&lt;!--[if lt IE 9]&gt;
+&lt;script src="js/html5shiv.js"&gt;&lt;/script&gt;
+&lt;![endif]--&gt;
+</code></pre>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+    <li class="comment even thread-even depth-1 buried" id="li-comment-90523">
+
+      <div class="comment-wrap" id="comment-90523">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/416f5477144264fcdd8f206891c60e63?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">sumesh</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-90523"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2011-03-21T22:10:33-07:00">March 21, 2011</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Thanks for the post, you did a great job :D</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-90523' data-commentid="90523" data-postid="3848" data-belowelement="comment-90523" data-respondelement="respond" aria-label='Reply to sumesh'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-90795">
+
+      <div class="comment-wrap" id="comment-90795">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/2d353d236914b6cdc1c6d6ef65d4d440?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Jiyoon J.</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-90795"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2011-03-29T22:52:36-07:00">March 29, 2011</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Thanks!<br />
+I want to try out the HTML5 one day.<br />
+this is a definitely good starting point !</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-90795' data-commentid="90795" data-postid="3848" data-belowelement="comment-90795" data-respondelement="respond" aria-label='Reply to Jiyoon J.'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-even depth-1" id="li-comment-97738">
+
+      <div class="comment-wrap" id="comment-97738">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/b915c9647cd67668c9627adadb0d7293?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Mathew</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-97738"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2011-06-23T22:25:36-07:00">June 23, 2011</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>is it really</p>
+<p>      &#8230;&#8230;&#8230;..</p>
+<p>or </p>
+<p>      &#8230;&#8230;.</p>
+<p>because I&#8217;ve seen site using  article over section.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-97738' data-commentid="97738" data-postid="3848" data-belowelement="comment-97738" data-respondelement="respond" aria-label='Reply to Mathew'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-100639">
+
+      <div class="comment-wrap" id="comment-100639">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/6a4bf334c4746fa0d33973de2d86a2d8?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Nikolay Dyankov</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-100639"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2011-07-20T03:20:23-07:00">July 20, 2011</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Hey,</p>
+<p>I&#8217;ve been using this post as a for many HTML5 projects and it&#8217;s great.</p>
+<p>But I watched a video the other day in which the caster said that the  tag was used *inside* the  tag to separate different sections in the article and it made me think which one is correct. Any thoughts?</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-100639' data-commentid="100639" data-postid="3848" data-belowelement="comment-100639" data-respondelement="respond" aria-label='Reply to Nikolay Dyankov'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-even depth-1 buried" id="li-comment-101548">
+
+      <div class="comment-wrap" id="comment-101548">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/fedc5502eca81b40ec96a561374556b7?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Pisyek</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-101548"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2011-07-28T04:46:15-07:00">July 28, 2011</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>thanks for sharing the code. :D</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-101548' data-commentid="101548" data-postid="3848" data-belowelement="comment-101548" data-respondelement="respond" aria-label='Reply to Pisyek'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-102412">
+
+      <div class="comment-wrap" id="comment-102412">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/c2d3ddf3e4e57b716495a0a4bf5aba10?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">David Chase</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-102412"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2011-08-03T12:54:50-07:00">August 3, 2011</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Wouldnt it make sense to have the the section be inside of the article. When reading a magazine article there are many sections to the article rather than many articles in a section?</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-102412' data-commentid="102412" data-postid="3848" data-belowelement="comment-102412" data-respondelement="respond" aria-label='Reply to David Chase'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-even depth-1" id="li-comment-102930">
+
+      <div class="comment-wrap" id="comment-102930">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/54144a4d68d08d059b0c873c418aab49?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">sidd</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-102930"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2011-08-08T04:00:02-07:00">August 8, 2011</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Header in section tag ?</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-102930' data-commentid="102930" data-postid="3848" data-belowelement="comment-102930" data-respondelement="respond" aria-label='Reply to sidd'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  <ul class="children">
+
+    <li class="comment odd alt depth-2" id="li-comment-1605123">
+
+      <div class="comment-wrap" id="comment-1605123">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/c6a1ef206eefb9e60d4501f159844daf?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Majid</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1605123"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2016-11-21T14:52:54-07:00">November 21, 2016</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>yup<br />
+you can use it for defining the header stuffs of an article like title , description , etc !<br />
+eg:</p>
+<pre><code>&lt;article&gt;
+  &lt;header&gt;
+    &lt;h2&gt;title&lt;/h2&gt;
+    &lt;h3&gt;author : blah&lt;/h3&gt;
+  &lt;/header&gt;
+.
+.
+.
+&lt;/article&gt;
+</code></pre>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-108849">
+
+      <div class="comment-wrap" id="comment-108849">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/5c2812c87e577f261c122e734b03e2aa?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Clint</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-108849"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2011-09-15T08:33:52-07:00">September 15, 2011</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>IE8 will not recognize these styles when using this markup. </p>
+<p>For example:<br />
+ tag in the stylesheet<br />
+header {width:940px;  margin:auto;  padding:0;}</p>
+<p> doc:<br />
+Hello World</p>
+<p>When you render the page in IE8 the content will not be centered.  If rendered in FF or Safari everything works fine.</p>
+<p>C~</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-108849' data-commentid="108849" data-postid="3848" data-belowelement="comment-108849" data-respondelement="respond" aria-label='Reply to Clint'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-110877">
+
+      <div class="comment-wrap" id="comment-110877">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/271702c2f918143c568b1d63f389d91a?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">dcolumbus</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-110877"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2011-09-27T17:54:28-07:00">September 27, 2011</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Hmmm&#8230; ,  &#8230; it&#8217;s not so clear, is it? Consider: <a href="http://www.turtleblog.co.uk/2011/04/whats-new-to-html5/" rel="nofollow">http://www.turtleblog.co.uk/2011/04/whats-new-to-html5/</a></p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-110877' data-commentid="110877" data-postid="3848" data-belowelement="comment-110877" data-respondelement="respond" aria-label='Reply to dcolumbus'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-115016">
+
+      <div class="comment-wrap" id="comment-115016">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/e90db8dd7b1f43f5d4f665912bbbc81b?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Warren</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-115016"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2011-10-17T09:32:45-07:00">October 17, 2011</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>your structure is wrong! Sections should be located inside an article&gt; an article makes sense by itself where as a section relies on other sections in order to make sense. <a href="http://html5doctor.com" rel="nofollow">http://html5doctor.com</a> has a few good articles on this</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-115016' data-commentid="115016" data-postid="3848" data-belowelement="comment-115016" data-respondelement="respond" aria-label='Reply to Warren'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  <ul class="children">
+
+    <li class="comment odd alt depth-2" id="li-comment-119950">
+
+      <div class="comment-wrap" id="comment-119950">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/00cba3e4580ed3f5eacca5775d15c586?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Michael</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-119950"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2011-11-05T03:58:19-07:00">November 5, 2011</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Warren: Article should be located inside a Sections not vice versa</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+    <li class="comment even thread-even depth-1" id="li-comment-120781">
+
+      <div class="comment-wrap" id="comment-120781">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/f37c4da036e626ffdbc7f0785ae0a5bc?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">emanuele</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-120781"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2011-11-08T08:15:16-07:00">November 8, 2011</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>WRONG TUTORIAL!!!!</p>
+<p>visit:</p>
+<p><a href="http://dev.w3.org/html5/spec/Overview.html#the-section-element" rel="nofollow">http://dev.w3.org/html5/spec/Overview.html#the-section-element</a></p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-120781' data-commentid="120781" data-postid="3848" data-belowelement="comment-120781" data-respondelement="respond" aria-label='Reply to emanuele'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-134945">
+
+      <div class="comment-wrap" id="comment-134945">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/25bb8b21fc69d0436c2ee2c9bbaaf480?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Shannan Rohde</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-134945"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2011-12-19T09:49:21-07:00">December 19, 2011</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Clint, you can use Norminizer or eric meyers CSS Reset. All great tools.  I forsee HTML 5 a dominate force behind SEO/SEM because of the semantics&#8230;.. Great article.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-134945' data-commentid="134945" data-postid="3848" data-belowelement="comment-134945" data-respondelement="respond" aria-label='Reply to Shannan Rohde'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-even depth-1" id="li-comment-165988">
+
+      <div class="comment-wrap" id="comment-165988">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/c341945c6ab6154e21ef4ffb59c4c6f9?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">jtarrats</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-165988"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2012-04-19T00:27:27-07:00">April 19, 2012</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Ive recently been trying to up grade my website too html5, and let me tell it&#8217;s been a pain becaue most off selectors wont position the way I want, any<br />
+ sugestions on tutorias on the</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-165988' data-commentid="165988" data-postid="3848" data-belowelement="comment-165988" data-respondelement="respond" aria-label='Reply to jtarrats'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  <ul class="children">
+
+    <li class="comment odd alt depth-2" id="li-comment-1616070">
+
+      <div class="comment-wrap" id="comment-1616070">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/151e52cef4b8166cbc4bfd98ac1cff2c?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">b0rk0v1c</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1616070"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2018-02-12T03:41:05-07:00">February 12, 2018</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>All major sections wrap in semantics tags and others leave as div&#8217;s or whatever you used. For screenreaders you can use alt inside tag to describe that div!</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-167537">
+
+      <div class="comment-wrap" id="comment-167537">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/68dbd7ad2cc73707d73694b33b8fc5b3?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Iftekhar Bhuiyan</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-167537"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2012-04-27T18:58:02-07:00">April 27, 2012</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>I just finished re-designing my theme. Thank you very much for your helpful post. HTML5 rocks :p</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-167537' data-commentid="167537" data-postid="3848" data-belowelement="comment-167537" data-respondelement="respond" aria-label='Reply to Iftekhar Bhuiyan'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-170703">
+
+      <div class="comment-wrap" id="comment-170703">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/34f6058960d90b81090f39ca925340d4?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Mohinder Singh</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-170703"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2012-05-15T02:01:19-07:00">May 15, 2012</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>every body give only the html5 tag but no body give how to write css for each like footer, aside, nav, section, article, etc.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-170703' data-commentid="170703" data-postid="3848" data-belowelement="comment-170703" data-respondelement="respond" aria-label='Reply to Mohinder Singh'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-176431">
+
+      <div class="comment-wrap" id="comment-176431">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/34f6058960d90b81090f39ca925340d4?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Mohinder Basta</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-176431"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2012-06-12T06:39:04-07:00">June 12, 2012</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>I want to Know how to write css properly for html5 </p>
+<p>can you please send me a layout with example</p>
+<p>or a refrence site</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-176431' data-commentid="176431" data-postid="3848" data-belowelement="comment-176431" data-respondelement="respond" aria-label='Reply to Mohinder Basta'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  <ul class="children">
+
+    <li class="comment odd alt depth-2" id="li-comment-241393">
+
+      <div class="comment-wrap" id="comment-241393">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/df9b41bc401b18fbe43b599226186232?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">mukesh</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-241393"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2012-12-26T05:24:22-07:00">December 26, 2012</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>mohinder u can make a class or an id inside ur header footer or aside tag &#8230; and simply add css to that class or id ..<br />
+like &#8230;</p>
+<p>section class=&#8221;left_top_section&#8221;&gt;<br />
+header class=&#8221;left_top_header&#8221;&gt; h1&gt;&#8230;&#8230;..header goes here &#8230;&#8230;./h1&gt;/header&gt;<br />
+/section&gt;</p>
+<p>and finally u can apply ur css rules to that classes &#8230;:)</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+    <li class="comment even thread-even depth-1" id="li-comment-186765">
+
+      <div class="comment-wrap" id="comment-186765">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/9c29c46a0d283065d9e96469babba99f?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Greg Richmond</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-186765"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2012-08-15T02:44:46-07:00">August 15, 2012</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Mohinder the CSS is no different to what you would have used with divs previously.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-186765' data-commentid="186765" data-postid="3848" data-belowelement="comment-186765" data-respondelement="respond" aria-label='Reply to Greg Richmond'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-193763">
+
+      <div class="comment-wrap" id="comment-193763">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/54d2a58b29c5494f70b46804caa756d7?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Targyro</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-193763"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2012-09-27T08:13:55-07:00">September 27, 2012</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Isn&#8217;t it insane that some of you guys are saying that the structure written above is wrong when HTML5 was created for that exact reason! If one thing is right about HTML5 is :ANYTHING GOES!</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-193763' data-commentid="193763" data-postid="3848" data-belowelement="comment-193763" data-respondelement="respond" aria-label='Reply to Targyro'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-even depth-1" id="li-comment-219727">
+
+      <div class="comment-wrap" id="comment-219727">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/6633dab9143a89f2c4f7ab00fc6f5887?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Santoram</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-219727"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2012-11-23T01:40:32-07:00">November 23, 2012</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Very clear information, Thanks for this information, but I have one confusion that, can we use section under article tag?</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-219727' data-commentid="219727" data-postid="3848" data-belowelement="comment-219727" data-respondelement="respond" aria-label='Reply to Santoram'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  <ul class="children">
+
+    <li class="comment odd alt depth-2" id="li-comment-1592343">
+
+      <div class="comment-wrap" id="comment-1592343">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/aefb197fe039d93a3fc1c271d558a8cc?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">syed kareem</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1592343"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-02-04T00:46:22-07:00">February 4, 2015</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>yes, but article comes under section is good to identify which section contains what articles and also that is Standard to use in websites..</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-219914">
+
+      <div class="comment-wrap" id="comment-219914">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/edc0c567d445e57727637e2e7906b908?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">mahendra</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-219914"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2012-11-23T10:11:23-07:00">November 23, 2012</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Yes we can use article tag.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-219914' data-commentid="219914" data-postid="3848" data-belowelement="comment-219914" data-respondelement="respond" aria-label='Reply to mahendra'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-231439">
+
+      <div class="comment-wrap" id="comment-231439">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/30f836b7bf984bacf84b2ab330ff3052?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Malakai</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-231439"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2012-12-10T15:44:20-07:00">December 10, 2012</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Is correct somethink like this??<br />
+&lt;section&gt;<br />
+&nbsp;&nbsp;&lt;header&gt;//h2&lt;/header&gt;<br />
+&nbsp;&nbsp;&lt;article&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;header&gt;//h3&lt;/header&gt;<br />
+&nbsp;&nbsp;&lt;/article&gt;<br />
+&nbsp;&nbsp;&lt;article&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;header&gt;//h3&lt;/header&gt;<br />
+&nbsp;&nbsp;&lt;/article&gt;<br />
+&lt;/section&gt;</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-231439' data-commentid="231439" data-postid="3848" data-belowelement="comment-231439" data-respondelement="respond" aria-label='Reply to Malakai'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  <ul class="children">
+
+    <li class="comment even depth-2" id="li-comment-241394">
+
+      <div class="comment-wrap" id="comment-241394">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/df9b41bc401b18fbe43b599226186232?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">mukesh</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-241394"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2012-12-26T05:27:18-07:00">December 26, 2012</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>yeah no problem with this &#8230;&#8230;absolutely right</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-241015">
+
+      <div class="comment-wrap" id="comment-241015">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/02c4f5ffc39b026fbe87d83cc3afd5ef?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">djdaniel</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-241015"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2012-12-25T14:28:32-07:00">December 25, 2012</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Finally HTML5 brings a better form of semantic markup! The  element makes more sense for navigation than the old</p>
+<p>&lt;</p>
+<p>ul&gt; (unordered list) or</p>
+<p>&lt;</p>
+<p>ol&gt; (ordered list) elements, since those lists could represent anything. With the  tag search engines can better define the idea that this tag is intended for navigational use only, such as with an absolute URL (<a href="http://www.your-site.com/example-page.html" rel="nofollow">http://www.your-site.com/example-page.html</a>), or with a relative URL (your-directory/example-file.html). The old list tags could have represented a list of images, or types of something, regardless if it was a link or not.</p>
+<p>The new section tag would be great for home pages where you might have links to different sections of your site and want to represent certain types of content in each section. The article tag is also a &#8220;no brainer&#8221;. Should have had this years ago. I really like the  tag too! A better way to represent content that is somehow related to but not directly part of an article or a pages content.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-241015' data-commentid="241015" data-postid="3848" data-belowelement="comment-241015" data-respondelement="respond" aria-label='Reply to djdaniel'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-even depth-1" id="li-comment-243949">
+
+      <div class="comment-wrap" id="comment-243949">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/6484ab5a17aa33b49c553372115ad055?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Mike S</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-243949"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2012-12-29T20:57:55-07:00">December 29, 2012</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Thank you for this! It&#8217;s just what I needed!</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-243949' data-commentid="243949" data-postid="3848" data-belowelement="comment-243949" data-respondelement="respond" aria-label='Reply to Mike S'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-256653">
+
+      <div class="comment-wrap" id="comment-256653">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/d4402cb65f6c32e1bc50b202e89a85aa?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">patrimoine</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-256653"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-01-14T05:34:17-07:00">January 14, 2013</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>hi,</p>
+<p>i just saw an article that explain that we should use  instead of article<br />
+<a href="http://www.iandevlin.com/blog/2013/01/html5/the-main-element" rel="nofollow">http://www.iandevlin.com/blog/2013/01/html5/the-main-element</a></p>
+<p>what do you think ?</p>
+<p>i don&#8217;t know how to combine my section, article, main and aside tags. Because of my grid i have my article and my secondary navigation on the same row.</p>
+<p>so can i do something like that?<br />
+<code><br />
+&lt;main&gt;<br />
+&nbsp;&lt;article&gt;<br />
+        &nbsp;&nbsp;&lt;h1&gt;&lt;/h1&gt;<br />
+        &nbsp;&nbsp;&lt;p&gt;&lt;/p&gt;<br />
+   &nbsp;&lt;/article&gt;</p>
+<p>&nbsp;&lt;aside&gt;<br />
+   &nbsp;&lt;/aside&gt;<br />
+&lt;/main&gt;<br />
+</code><br />
+?</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-256653' data-commentid="256653" data-postid="3848" data-belowelement="comment-256653" data-respondelement="respond" aria-label='Reply to patrimoine'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  <ul class="children">
+
+    <li class="comment even depth-2" id="li-comment-1582530">
+
+      <div class="comment-wrap" id="comment-1582530">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/f856cd03922a7e84d657d7ffce8a7105?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">iqbalhussain</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1582530"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2014-06-12T04:22:17-07:00">June 12, 2014</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>You have used h2 inside the main, sections, article</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-258575">
+
+      <div class="comment-wrap" id="comment-258575">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/705cd4e164cf21589bab0a022e84a910?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Terrasoverkappingen</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-258575"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-01-16T02:19:00-07:00">January 16, 2013</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Great! With your help I just made a redesign to HTML5 and Jquery for our website. Thanks!</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-258575' data-commentid="258575" data-postid="3848" data-belowelement="comment-258575" data-respondelement="respond" aria-label='Reply to Terrasoverkappingen'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-281520">
+
+      <div class="comment-wrap" id="comment-281520">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/0db30993379e6aee8b75443f9ff2a4dc?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">sunil</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-281520"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-02-11T00:30:30-07:00">February 11, 2013</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>You have used h2 inside sections but I believe it should be h1 tag</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-281520' data-commentid="281520" data-postid="3848" data-belowelement="comment-281520" data-respondelement="respond" aria-label='Reply to sunil'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-283641">
+
+      <div class="comment-wrap" id="comment-283641">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/631577fc0428c1dbc6176a3ca5935f77?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Daniel</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-283641"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-02-13T14:04:44-07:00">February 13, 2013</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>This seems inconsistent with what html5doctor says. The article tag should be used where the section tag is used and vice versa.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-283641' data-commentid="283641" data-postid="3848" data-belowelement="comment-283641" data-respondelement="respond" aria-label='Reply to Daniel'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-296304">
+
+      <div class="comment-wrap" id="comment-296304">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/9aa5be6b9ae06f1adf25f4c654a1480b?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">QuicksilverTO</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-296304"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-03-04T14:00:21-07:00">March 4, 2013</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>&#8230;or maybe it doesn&#8217;t matter at all.  The issue here is EVERYONE IS CONFUSED (including those who have written books about HTML5), and for good reason.<br />
+I suggest you read this free chapter from &#8220;The truth about HTML5&#8221; (<a href="http://www.netmagazine.com/features/truth-about-structuring-html5-page" rel="nofollow">http://www.netmagazine.com/features/truth-about-structuring-html5-page</a>) .<br />
+Once you understand the intention behind the tags, you can decide if and when you should use them.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-296304' data-commentid="296304" data-postid="3848" data-belowelement="comment-296304" data-respondelement="respond" aria-label='Reply to QuicksilverTO'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-344323">
+
+      <div class="comment-wrap" id="comment-344323">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/668fa17b9a101df30ce738e49c2919c9?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Bijay Pakhrin</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-344323"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-04-04T03:58:33-07:00">April 4, 2013</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Hey chris, quick question, is it okay to put section inside article tag? or is it not valid?</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-344323' data-commentid="344323" data-postid="3848" data-belowelement="comment-344323" data-respondelement="respond" aria-label='Reply to Bijay Pakhrin'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  <ul class="children">
+
+    <li class="comment even depth-2" id="li-comment-1580416">
+
+      <div class="comment-wrap" id="comment-1580416">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/0b1a35cf917c9229c75938613115bcc7?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Mark Stewart</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1580416"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2014-04-26T23:15:42-07:00">April 26, 2014</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Readability and W3C go both ways. HTML5 layout hierarchy gives greater weight to section tag, for layout reasons. Article tag locations are designer semantic, content delivery. CSS weighting, heavy-to-lightweight seems to run section-article-div. Making <strong>section</strong> a fantastic <em>content anchor</em>, <strong>article</strong> a reliable <em>placeholder</em>, and div an unobtrusive <em>manipulator</em>.</p>
+<p><code>header/header article... section... article/article .../section .../article footer/footer</code></p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-442477">
+
+      <div class="comment-wrap" id="comment-442477">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/19abfee84b1818e15f8695d5be45062b?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Olivier C</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-442477"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-05-19T09:05:42-07:00">May 19, 2013</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>We are in 2013 &#8230; we can now use the &lt;main&gt; tag.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-442477' data-commentid="442477" data-postid="3848" data-belowelement="comment-442477" data-respondelement="respond" aria-label='Reply to Olivier C'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  <ul class="children">
+
+    <li class="comment byuser comment-author-mmcgu1966 even depth-2" id="li-comment-1582034">
+
+      <div class="comment-wrap" id="comment-1582034">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/8ab673c4bc3b7bc228ed7e431019f0b6?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">mmcgu1966</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1582034"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2014-06-03T11:56:39-07:00">June 3, 2014</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>I know this is an older post, but I was just updating my templates and noticed that <a href="http://www.w3schools.com/tags/tag_main.asp" title="w# schools" rel="nofollow">W3Schools</a> still shows the  tag as <em>&#8216;unsupported&#8217;</em>. that seems a little odd. Anybody have any problems with it in IE 10+?</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-454714">
+
+      <div class="comment-wrap" id="comment-454714">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/a9fef54dc56aedd63adf40186a9f7ec1?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Nemanja Cosovic</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-454714"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-06-04T05:06:53-07:00">June 4, 2013</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>I was just glancing over the code and I noticed there is no <code></code> tag. Perhaps Coyer might edit the code since there are a lot of comments and people might not scroll down.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-454714' data-commentid="454714" data-postid="3848" data-belowelement="comment-454714" data-respondelement="respond" aria-label='Reply to Nemanja Cosovic'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-463271">
+
+      <div class="comment-wrap" id="comment-463271">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/68dbd7ad2cc73707d73694b33b8fc5b3?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Iftekhar Bhuiyan</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-463271"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-06-15T08:51:19-07:00">June 15, 2013</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Wondering if the comment section should be within the main &lt;section&gt;&lt;/section&gt; tag or do we need another &lt;section&gt;&lt;/section&gt; to place comment template? Thanks in advance.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-463271' data-commentid="463271" data-postid="3848" data-belowelement="comment-463271" data-respondelement="respond" aria-label='Reply to Iftekhar Bhuiyan'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-525888">
+
+      <div class="comment-wrap" id="comment-525888">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/f5c4ce2332b047b6267385d44e59111d?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">kamran</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-525888"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-08-26T13:15:43-07:00">August 26, 2013</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Thanks! HTML5 change the web world&#8230;</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-525888' data-commentid="525888" data-postid="3848" data-belowelement="comment-525888" data-respondelement="respond" aria-label='Reply to kamran'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-646266">
+
+      <div class="comment-wrap" id="comment-646266">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/51b7505287f89ecbd0c7c571dcd25022?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Akam Omer</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-646266"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-11-09T06:47:56-07:00">November 9, 2013</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Please consider these mistakes:</p>
+<p><a href="http://html5doctor.com/avoiding-common-html5-mistakes/" rel="nofollow">http://html5doctor.com/avoiding-common-html5-mistakes/</a></p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-646266' data-commentid="646266" data-postid="3848" data-belowelement="comment-646266" data-respondelement="respond" aria-label='Reply to Akam Omer'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-713688">
+
+      <div class="comment-wrap" id="comment-713688">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/23fabf08f36e3659a08c6d46f58b7165?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Dan Ware</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-713688"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-11-26T14:18:09-07:00">November 26, 2013</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Great simple post!</p>
+<p>People still think it contains mistakes, but not everyone can read specs!</p>
+<p>Here in the spec, it clearly shows an article containing a section and a section containing an article &#8211; get over it!</p>
+<p><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-article-element" rel="nofollow">http://www.w3.org/html/wg/drafts/html/master/sections.html#the-article-element</a></p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-713688' data-commentid="713688" data-postid="3848" data-belowelement="comment-713688" data-respondelement="respond" aria-label='Reply to Dan Ware'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  <ul class="children">
+
+    <li class="comment even depth-2" id="li-comment-1581072">
+
+      <div class="comment-wrap" id="comment-1581072">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/0b1a35cf917c9229c75938613115bcc7?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Mark</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1581072"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2014-05-12T04:27:31-07:00">May 12, 2014</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>This is true, Dan. But in Chrome and IE (I only use later for now) the CSS cascade handles section and article differently, depending on parent-child relations.</p>
+<p>article and section are newbies &#8211; p a and h1 have been around a while<br />
+screen layout reflects the stability of older (foundation?) elements</p>
+<p>sometimes designers have to code like bug testers &#8211; push both incidences and you have more control<br />
+not sure if that applies with article and section &#8211; they&#8217;re on steroids for now</p>
+<p><a href="http://css-tricks.com/perfect-full-page-background-image/" rel="nofollow">http://css-tricks.com/perfect-full-page-background-image/</a> &#8230;my fav in this respect&#8230;</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-885272">
+
+      <div class="comment-wrap" id="comment-885272">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/5f4b0973b6f5320270785a7bf7bb92c3?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Chathura Wijekoon</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-885272"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-12-18T22:07:51-07:00">December 18, 2013</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Where is the <strong>H1</strong>? Can we place <strong>multiple H1</strong> tags within each section or articles or headers? Isn&#8217;t it good for <strong>SEO</strong>?</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-885272' data-commentid="885272" data-postid="3848" data-belowelement="comment-885272" data-respondelement="respond" aria-label='Reply to Chathura Wijekoon'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  <ul class="children">
+
+    <li class="comment even depth-2" id="li-comment-1583401">
+
+      <div class="comment-wrap" id="comment-1583401">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/480a4a1425c1508baa2f333b8f130a83?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Bryan</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1583401"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2014-07-03T16:57:40-07:00">July 3, 2014</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Hey Chathura,</p>
+<p>Maybe someone already answered this for you, but according to Matt Cutts, who is a big wig @ Google and is pretty sociable with people who ask questions regarding best practices for SEO, he states that multiple H1&#8217;s on a single page is okay to use, but use with caution and moderation. Meaning use H1&#8217;s where they make sense! Typically when I develop a site I use an H1 for the logo (just on the home page) and the home page&#8217;s main title can also have an H1, because they are both separated pretty well in different sections of the site. When it comes to doing an interior layout page I removed the H1 from the logo and just go with a basic anchor instead which leaves  only one H1 on the page and it is dedicated to the page title.</p>
+<p>Hope this makes sense.</p>
+<p>Matt Cutts video talking about best practices for H1 elements in SEO: <a href="https://www.youtube.com/watch?v=GIn5qJKU8VM" rel="nofollow">https://www.youtube.com/watch?v=GIn5qJKU8VM</a></p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+                      </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-1583400">
+
+      <div class="comment-wrap" id="comment-1583400">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/480a4a1425c1508baa2f333b8f130a83?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Bryan</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1583400"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2014-07-03T16:49:03-07:00">July 3, 2014</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Maybe this has been addressed, but I see this on many websites now a days where the developers have totally skipped over the H1 tag and go straight to using H2&#8217;s for things such as the page title/article title of the page&#8230; I&#8217;m confused to this as H1 is supposed to be used for the pages main title&#8230; Is there any explanation as to why this is becoming a common theme among website now a days? Pretty confusing to me and I&#8217;m also going out on a limb and thinking the developers of whatever website that uses H2 as the main page title are just lazy and not noticing the type of html element being used.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-1583400' data-commentid="1583400" data-postid="3848" data-belowelement="comment-1583400" data-respondelement="respond" aria-label='Reply to Bryan'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-1583402">
+
+      <div class="comment-wrap" id="comment-1583402">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/8ab673c4bc3b7bc228ed7e431019f0b6?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Michael E McGuire</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1583402"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2014-07-03T17:19:33-07:00">July 3, 2014</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>It&#8217;s getting more common to have a banner or logo-image in place of the H1 headline. Sub-headlines would still feel like they should be H2s and so-on. There&#8217;s really no good reason to even use H-tags since we tend to reset all the default styles anyway and web page design are getting away from the print-model.</p>
+<p>The unasked question is, should the logo be in an H1 tag.. maybe with a Rel attribute to go with it? Would anybody care?</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-1583402' data-commentid="1583402" data-postid="3848" data-belowelement="comment-1583402" data-respondelement="respond" aria-label='Reply to Michael E McGuire'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-1584917">
+
+      <div class="comment-wrap" id="comment-1584917">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/2d3ba8d847aad69f47a05c0b581ad18a?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Yazmee</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1584917"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2014-09-02T20:45:39-07:00">September 2, 2014</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Hmm&#8230; Consider reading a newspaper with different sections, such as sport section, entertainment section and business section. Don&#8217;t each section have a few articles in them? And sometimes, one article may have a few sections in them. Seems like a chicken-or-egg-comes-first sorta thing :P</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-1584917' data-commentid="1584917" data-postid="3848" data-belowelement="comment-1584917" data-respondelement="respond" aria-label='Reply to Yazmee'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-1593193">
+
+      <div class="comment-wrap" id="comment-1593193">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/82e0bc1dfa95a381266e79a021aed0be?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Eli</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1593193"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-03-13T16:16:55-07:00">March 13, 2015</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Shouldn&#8217;t it be like this: <a href="http://codepen.io/anon/pen/myzZMb.html" rel="nofollow">http://codepen.io/anon/pen/myzZMb.html</a></p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-1593193' data-commentid="1593193" data-postid="3848" data-belowelement="comment-1593193" data-respondelement="respond" aria-label='Reply to Eli'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-1593569">
+
+      <div class="comment-wrap" id="comment-1593569">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/0eaf0793b24ad798f2f9b6a44066b6fa?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">OzzyTheGiant</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1593569"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-04-01T07:11:31-07:00">April 1, 2015</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>From what I read in an article, it actually doesn&#8217;t matter if use sections with articles or articles with sections. I don&#8217;t know if that would be ok, but I would think section tags would be preferred to use for generic content, whereas articles are for blog type posts or things of the like.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-1593569' data-commentid="1593569" data-postid="3848" data-belowelement="comment-1593569" data-respondelement="respond" aria-label='Reply to OzzyTheGiant'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-1595248">
+
+      <div class="comment-wrap" id="comment-1595248">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/1f906549aa73ab6fffcf7572df6751d1?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">aboutqx</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1595248"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-06-17T05:20:50-07:00">June 17, 2015</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Well,do we get an answer about &#8220;section&#8221; and &#8220;article &#8221; above?</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-1595248' data-commentid="1595248" data-postid="3848" data-belowelement="comment-1595248" data-respondelement="respond" aria-label='Reply to aboutqx'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-1597434">
+
+      <div class="comment-wrap" id="comment-1597434">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/8ab673c4bc3b7bc228ed7e431019f0b6?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Michael E McGuire</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1597434"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-10-10T08:25:02-07:00">October 10, 2015</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>I think the purpose of the Article tag is mainly for bloggy goodness. If your making a non-news/info page,  having the Article tag is kinda misleading, though I suppose it might make a nice Paragraph wrapper. In the end though, it&#8217;s all symantics. You can do an entire page in nothing but Divs.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-1597434' data-commentid="1597434" data-postid="3848" data-belowelement="comment-1597434" data-respondelement="respond" aria-label='Reply to Michael E McGuire'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-1600591">
+
+      <div class="comment-wrap" id="comment-1600591">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/f9eca6cd6bb418d506f44892b9f09248?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">nathaniel offer</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1600591"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2016-03-29T11:06:43-07:00">March 29, 2016</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Everyone is so focused on the &#8220;section&#8221; tag and where it&#8217;s positioned that no one has asked about another tag that&#8217;s new in HTML5 the &#8220;main&#8221; tag. While the content might be an &#8220;article&#8221; or a &#8220;section&#8221; it is also the &#8220;main&#8221; content of the page so shouldn&#8217;t that tag be used?</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-1600591' data-commentid="1600591" data-postid="3848" data-belowelement="comment-1600591" data-respondelement="respond" aria-label='Reply to nathaniel offer'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-1604648">
+
+      <div class="comment-wrap" id="comment-1604648">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/03067755b5591d74afc266c16cb8e9cf?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Umer</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1604648"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2016-10-21T03:22:16-07:00">October 21, 2016</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>How is this any different than standard HTML?<br />
+Which are HTML5 specific elements!?</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-1604648' data-commentid="1604648" data-postid="3848" data-belowelement="comment-1604648" data-respondelement="respond" aria-label='Reply to Umer'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-1605338">
+
+      <div class="comment-wrap" id="comment-1605338">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/0b30e82759cdab78fb3f9ecb96c85391?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Vashi</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1605338"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2016-12-01T01:13:59-07:00">December 1, 2016</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Dear All,</p>
+<p>In HTML 5, the Specific flow or structural skeleton is well described above.<br />
+It basically has 7 core elements, unlike in html4 and earlier versions,  we were depending on div tags towards these roles by using CSS to display in the required / necessary format.</p>
+<p>In HTML 5<br />
+that basic purpose of div and controlling them with CSS is appended (Note: Just a standard addon not removed.), and thoroughly new ammendments were made with these core tags serving the purpose much more efficiently, they are as follows.</p>
+<p>1) Header :</p>
+<p>2) Nav :</p>
+<p>3) Main:<br />
+4) Section:</p>
+<p>5) Article:</p>
+<p>6) Aside:</p>
+<p>7) Footer:</p>
+<p>Now professionally, you can use all of these or some of these as suggested by Chris or adopting a liberal approach where you can make a combination of both the above tags and div or else just go with the traditional usage of div and css.</p>
+<p>The differnce and details about them is explained with simple example in the below comment.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-1605338' data-commentid="1605338" data-postid="3848" data-belowelement="comment-1605338" data-respondelement="respond" aria-label='Reply to Vashi'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-1605339">
+
+      <div class="comment-wrap" id="comment-1605339">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/0b30e82759cdab78fb3f9ecb96c85391?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Vashi</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1605339"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2016-12-01T02:15:52-07:00">December 1, 2016</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Now, Just as I stated above,</p>
+<p>in a traditional approach</p>
+<p>&lt;</p>
+<p>div id=&#8221;footer&#8221;&gt;</p>
+<p>where all the id values are precisely defined in CSS, and only act accordingly, here the purpose and role depends on the definition we make in CSS.</p>
+<p>In Standard HTML 5</p>
+<p>         &lt;/header</p>
+<pre><code>  &lt;article&gt;
+</code></pre>
+<p>&lt;</p>
+<p>section&gt;</p>
+<p>(optional * not a cumpolsary tag to be used but definitely a good addon)</p>
+<p>Here the CSS still plays a vital role, but only for visual styling rather than role assignment to the tags on the primary level.</p>
+<p>Now the</p>
+<p>&lt;</p>
+<p>header&gt; tag is used to display the top section of the page where the logo, search bar, login, subscription, etc., other significant elements are placed.<br />
+Note: it is also placed inside the content for titles or just as highlighter etc.,</p>
+<p>&lt;</p>
+<p>nav&gt; tag, as usual meant to be used for our menu of the site.<br />
+Note: it can also be placed any where, need not be right after the header (depends on type of menu -vertical/horizontal/large/ multi purpose etc.,), or else can be used even for  inner menus placed in sidebar (either horizontally or vertically.)</p>
+<p>&lt;</p>
+<p>section&gt; tag is a tag which holds, some content be it a menu on as sidebar or a place of new postings display, or image gallery etc.,<br />
+Note: it can be placed anywhere on the site, the core purpose is to hold some content.</p>
+<p>&lt;</p>
+<p>article&gt; tag is a tag which also hold the data, but only on a specific context, rather than  multiple contexts<br />
+eg: assume if you are speaking about on &#8220;Prime minister&#8221; you can hold as many details only regarding that speicified subject, you can not suddenly say about &#8220;President&#8221; in the same context.<br />
+but if you are speaking about politics you can inlude both Prime minister and President, they both become part of the context.</p>
+<p>Let me detail you with a swift example</p>
+<p>       POLITICS </p>
+<p>                      Prime MInister<br />
+                             Name: John<br />
+                                                 Age: 45<br />
+                                                 Party: XYZ party<br />
+                                                  XYZ party is a national party established in1990 </p>
+<p>                              Biography </p>
+<p>                      President<br />
+                            Name: John<br />
+                                                Age: 45<br />
+                                                Party: ABC Party<br />
+                                                ABC party is a regional party established in 2001</p>
+<p>                            Biography </p>
+<p>&lt;/section<br />
+Now here Politics is treated as a section, and the articles included are Prime minister and  President.<br />
+We can make use of this section again but then only the details of the prime minister<br />
+for eg:-<br />
+Name:,<br />
+Age:<br />
+Area of Contest:<br />
+Party he/she belongs to:<br />
+How many times he won:<br />
+Details / Biography:<br />
+etc., would be treated as sections with in the article.<br />
+Similarly for the other as well.<br />
+Meanwhile, there is an interesting element/tag </p>
+<p>to be spoken. This also serves definite purposes, but sould allways be realted to the context though not actually part of it as you see in the above example it speaks about some specific part related to the context but not part of it.</p>
+<p> tag is the content holder where the main portion of the site resides which may include any from slider to, menu, forms, details of the site etc.,</p>
+<p>Last comes the</p>
+<p>&lt;</p>
+<p>footer&gt; tag<br />
+as its purpose and role need not be explained, presuming you all know what is it meant for.</p>
+<p>I believe, the explanation is a bit lengthy, but definite to the point and understandable.<br />
+for any queries, you can comment back or reach me on my mail <a href="mailto:info.ontechs@gmail.com">info.ontechs@gmail.com</a></p>
+<p>I really appreciate &#8220;Chris&#8221; for this splendid and beautiful portal with such massive bundle of knowledge.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-1605339' data-commentid="1605339" data-postid="3848" data-belowelement="comment-1605339" data-respondelement="respond" aria-label='Reply to Vashi'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-1611999">
+
+      <div class="comment-wrap" id="comment-1611999">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/8b6955fcd1ccee225836d3d8ddcfc8e3?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">rajendra</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1611999"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2017-09-25T07:05:29-07:00">September 25, 2017</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>From mozilla: <code>&lt;section&gt;</code> can contain <code>&lt;article&gt;</code> and <code>&lt;article&gt;</code> can contain <code>&lt;section&gt;</code>.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-1611999' data-commentid="1611999" data-postid="3848" data-belowelement="comment-1611999" data-respondelement="respond" aria-label='Reply to rajendra'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-1612813">
+
+      <div class="comment-wrap" id="comment-1612813">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/75442e7873d73d477c81d306a77ffbad?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Andrey</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1612813"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2017-11-02T17:47:24-07:00">November 2, 2017</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>What is the difference between article and section?<br />
+•   both can:<br />
+o   be nested in each other<br />
+o   take a different notion in a different context or nesting level</p>
+<p>•   sections are like book chapters<br />
+o   they usually have siblings (maybe in a different document?)<br />
+o   together they have something in common, like chapters in a book</p>
+<p>•   one author, one article, at least on the lowest level<br />
+o   standard example: a single blog comment<br />
+o   a blog entry itself is also a good example<br />
+o   a blog entry article and its comment articles could also be wrapped with an article<br />
+o   it’s some &#8220;complete&#8221; thing, not a part in a series of similar</p>
+<p>•   sections in an article are like chapters in a book<br />
+•   articles in a section are like poems in a volume (within a series)</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-1612813' data-commentid="1612813" data-postid="3848" data-belowelement="comment-1612813" data-respondelement="respond" aria-label='Reply to Andrey'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-1618324">
+
+      <div class="comment-wrap" id="comment-1618324">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/0cc73a270017b2ccc4b36561441890c2?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">squidbe</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1618324"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2018-03-28T11:11:08-07:00">March 28, 2018</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>When in doubt, refer to the spec:<br />
+<a href="https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-section-element" rel="nofollow">https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-section-element</a><br />
+<a href="https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-article-element" rel="nofollow">https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-article-element</a></p>
+<p>Note that the examples in the spec show section and article both nested within each other; there is no simple rule stating one should only/always be nested within another.</p>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-1618324' data-commentid="1618324" data-postid="3848" data-belowelement="comment-1618324" data-respondelement="respond" aria-label='Reply to squidbe'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-1634062">
+
+      <div class="comment-wrap" id="comment-1634062">
+
+        <div class="author-avatar">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50" class="lazyload-gravatar" alt="User Avatar" data-src="https://secure.gravatar.com/avatar/e5a6bb7125a5aa9a7c9a914e693ff3e1?s=160&d=retro&r=pg">
+          <svg class="half-circle" width="80px" height="80px">
+            <use xlink:href="#half-circle"></use>
+          </svg>
+        </div>
+
+        <div class="comment-body">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">ionurboz</div> <div class="comment-time"><a href="https://css-tricks.com/snippets/html/html5-page-structure/#comment-1634062"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2018-05-24T15:34:30-07:00">May 24, 2018</time></div>
+            
+          </div>
+          <div class="comment-content">
+
+            <p>Maybe need adding the main content role, or main tag.</p>
+<pre>....</pre>
+
+          </div>
+        </div>
+        <div class="comment-actions">
+          <div class="reply">
+            <a rel='nofollow' class='comment-reply-link' href='#comment-1634062' data-commentid="1634062" data-postid="3848" data-belowelement="comment-1634062" data-respondelement="respond" aria-label='Reply to ionurboz'>Reply</a>          </div>
+        </div>
+
+      </div>
+      
+    
+  </li><!-- #comment-## -->
+    </ol>
+
+  
+  
+    <div class="respond">
+
+      
+      <div class="comment-form-form-area">
+
+        	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/snippets/html/html5-page-structure/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://css-tricks.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /><label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<!-- Mailchimp for WordPress v4.4 - https://mc4wp.com/ --><input type="hidden" name="_mc4wp_subscribe_wp-comment-form" value="0" /><p class="mc4wp-checkbox mc4wp-checkbox-wp-comment-form"><label><input type="checkbox" name="_mc4wp_subscribe_wp-comment-form" value="1" checked="checked" /><span>Get the CSS-Tricks newsletter</span></label></p><!-- / Mailchimp for WordPress --><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='3848' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="872d4bc358" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="41"/></p>			</form>
+			</div><!-- #respond -->
+	
+        <div class="comment-reminders bold-underline-links">
+
+          <p>All comments are held for moderation. We'll publish all comments that are on topic, not rude, and adhere to our <a href="/coc">Code of Conduct</a>. You'll even get little stars if you do an extra good job.</p>
+
+          <p>You may write comments in <a href="https://commonmark.org/help/">Markdown</a>. This is the best way to post any code, inline like `&lt;div>this&lt;/div>` or multiline blocks within triple backtick fences (```) with double new lines before and after.</p>
+
+          <p>Want to tell us something privately, like pointing out a typo or stuff like that? <a href="/contact/">Contact Us</a>.</p>
+
+        </div>
+
+      </div>
+
+      <div class="comment-form-coc-area bold-underline-links">
+        We have a<br>
+        <a href="/coc/">Code of Conduct</a>.
+        <circle-text r="132" class="circle-text-coc">
+          Be cool. Be helpful. The web is a big place. Have fun. High five.
+        </circle-text>
+      </div>
+
+      
+    </div>
+  
+</section>      </div>
+</div>
+
+  </div>
+  <footer class="site-footer footer-newsletter">
+
+    <div class="footer-newsletter-inside">
+      <hr class="thick">
+
+      <h2>How do you stay up to date in this fast⁠-⁠moving&nbsp;industry?</h2>
+
+      <p>A good start is to sign up for our weekly hand-written newsletter. We bring you the best articles and ideas from around the web, and what we think about them.</p>
+  
+      <div id="footer-form-wrap">
+
+  <form action="https://chriscoyier.us2.list-manage.com/subscribe/post?u=155f5a9ccc4e24c318130cace&amp;id=197f127a68" method="post" id="mc-embedded-subscribe-form">
+    
+    <div class="subwrap">
+      <div class="inner-sub">
+        <div class="submarine">
+          <div class="porthole"></div>
+          <div class="porthole"></div>
+          <div class="fin"></div>
+          <div class="fin lower"></div>
+          <div class="periscope"></div>
+          <div class="prop"></div>
+          <label for="mce-EMAIL" class="screen-reader">Email Address</label>
+          <input type="email" name="EMAIL" class="required email mailchimp-email-input" id="mce-EMAIL" placeholder="lovetricks@internet.cool" required="">
+          <div class="inner"></div>
+        </div>
+
+        <div class="btnwrap">
+          <b>
+            <span>Subscribe</span>
+          </b>
+          <input type="submit" value="Subscribe" name="Subscribe" id="mc-embedded-subscribe" class="button subscribe-button">
+        </div>
+        
+      </div>
+    </div>
+  </form>
+</div>
+      <div class="social-links">
+        <a href="https://www.facebook.com/CSSTricks/" class="social-link-facebook">
+          <strong>Facebook</strong>
+          <span>@CSSTricks</span>
+        </a>
+
+        <a href="https://twitter.com/css" class="social-link-twitter">
+          <strong>Twitter</strong>
+          <span>@CSS</span>
+        </a>
+      
+        <a href="https://www.youtube.com/user/realcsstricks" class="social-link-youtube">
+          <strong>YouTube</strong>
+          <span>@realcsstricks</span>
+        </a>
+    
+        <a href="https://spectrum.chat/css-tricks" class="social-link-spectrum">
+          <strong>Spectrum</strong>
+          <span>@css-tricks</span>
+        </a>
+    
+        <a href="https://css-tricks.com/feed/" class="social-link-rss">
+          <strong>RSS</strong>
+          <span>Feed</span>
+        </a>
+      </div>
+    </div>
+
+  </footer>
+
+  <div class="footer-colophon-wrapper">
+    <footer class="site-footer footer-colophon">
+
+      <div>
+        <h4>👋 </h4>
+        <p>CSS-Tricks<span>*</span> is created, written by, and maintained by <a href="https://chriscoyier.net">Chris Coyier</a> and <a href="/about/">a team</a> of swell people. It is built on WordPress and powered up by <a href="/jetpack/">Jetpack</a>. It is made possible through <a href="/advertising/">sponsorships</a> from products and services we like.</p>
+
+        <p class="mega-big-time-warning"><small><span>*</span>May or may not contain any actual "CSS" or "Tricks".</small></p>
+      </div>
+
+      <nav>
+        <h4>Other Nav</h4>
+        <a href="/contact/">Contact</a>
+        <a href="/about/">About</a>
+        <a href="/forums/">Forums</a>
+        <a href="/advertising/">Advertise</a>
+        <a href="/license/">License</a>
+        <a href="/subscription-options/">Subscribe</a>
+        <a href="/guest-posting/">Guest Posting</a>
+        <a href="/authors/">All Authors</a>
+        <a href="https://conferences.css-tricks.com/">Conferences</a>
+        <a href="https://thepowerofserverless.info/">Serverless</a>
+      </nav>
+
+    </footer>
+  </div>
+
+  <footer class="site-footer footer-partners">
+
+    <div class="footer-partner footer-partner-codepen">
+
+      <div>
+        <a href="https://codepen.io/hello">
+          <svg class="codepen-logo" viewBox="0 0 138 26" width="100%" height="100%"><path d="M15 8a7 7 0 1 0 0 10m7-8.7L33 2l11 7.3v7.4L33 24l-11-7.3zm0 0l11 7.4 11-7.4m0 7.4L33 9.3l-11 7.4M33 2v7.3m0 7.4V24M52 6h5a7 7 0 0 1 0 14h-5zm28 0h-9v14h9m-9-7h6m11 1h6a4 4 0 0 0 0-8h-6v14m26-14h-9v14h9m-9-7h6m11 7V6l11 14V6"></path></svg>          <span class="screen-reader-text">CodePen</span>
+        </a>
+        <p class="bold-underline-links">
+          <a href="https://codepen.io/hello">CodePen</a> is a place to experiment, debug, and show off your HTML, CSS, and JavaScript creations.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-partner footer-partner-mediatemple">
+      <div>
+        <a href="https://mediatemple.net/landing/csstricks/?utm_source=CSS-Tricks&utm_medium=display&utm_campaign=heaeder-box">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.56 32.15"><title>mt</title><path d="M16.45,9.77V11.7h.11a17.4,17.4,0,0,1,9.19-2.25c5.78,0,7.74,1.65,8.5,2.25a17.37,17.37,0,0,1,9.12-2.25c9.83,0,9.83,3.87,9.83,5.44V24H45.28V15.89c0-1.69,0-3.56-4.22-3.56-2.08,0-4.22.64-5,1.57a4.23,4.23,0,0,0-1,3.27V24H27.19V16.21c0-2.42.06-3.88-4.1-3.88-2.08,0-4.22.55-5,1.38-.63.63-1,1.29-1,3.39V24H9.11V9.77Z" fill="#fff"/><path d="M72.29,12.93H66.54v5.71c0,2,0,2.67,2.35,2.67A16.34,16.34,0,0,0,72,21l.25,0,.74,2.9a41.33,41.33,0,0,1-6.67.57c-2.59,0-5.93-.39-7.17-1.45-1-.87-1.17-1.72-1.17-3.88V12.93H54.13V10H58V7.13l8.52-2.21v5h5.75Z" fill="#fff"/><path d="M5.24,32.08A29.62,29.62,0,0,1,0,16,28.12,28.12,0,0,1,5.3,0H8.48c-2.36,5.23-4,9.68-4,16.15A36.72,36.72,0,0,0,8.35,31.87a.79.79,0,0,1,.1.21Z" fill="#fff"/><path d="M76.33.07a29.64,29.64,0,0,1,5.23,16.08,28,28,0,0,1-5.3,16H73.08c2.36-5.24,4-9.68,4-16.14A36.79,36.79,0,0,0,73.22.27a.47.47,0,0,1-.1-.2Z" fill="#fff"/></svg>        </a>
+        <p class="bold-underline-links">
+          <a href="https://mediatemple.net/landing/csstricks/?utm_source=CSS-Tricks&utm_medium=display y&utm_campaign=heaeder-box">MediaTemple</a> has been CSS-Tricks web host since day one. Save 20% with code <strong>CSSTRICKS</strong>.</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-partner footer-partner-shoptalk">
+
+      <div>
+        <a href="https://shoptalkshow.com"><img class="shoptalk-img" src="https://css-tricks.com/wp-content/themes/CSS-Tricks-17/images/shoptalk_logo.png" alt="ShopTalk Show"></a>
+        <p class="bold-underline-links">
+          <a href="https://shoptalkshow.com">ShopTalk</a> is a podcast all about front-end web design and development.
+        </p>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<clipPath id="a"><path fill="#fff" d="M0 0h40v40H0z"/></clipPath>
+<clipPath id="a"><path fill="#fff" d="M0 0h40v40H0z"/></clipPath>
+<clipPath id="a"><path fill="#fff" d="M0 0h40v40H0z"/></clipPath>
+<clipPath id="a"><path fill="#fff" d="M0 0h40v40H0z"/></clipPath>
+<clipPath id="a"><path fill="#fff" d="M0 0h40v40H0z"/></clipPath>
+</defs>
+<symbol id="half-circle" viewBox="0 0 106 57"><path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"/></symbol>
+<symbol id="icon-burger" viewBox="0 0 24 24"><rect y="2" width="24" height="2" rx="1"/><rect y="20" width="24" height="2" rx="1"/><rect y="8" width="24" height="2" rx="1"/><rect y="14" width="24" height="2" rx="1"/></symbol>
+<symbol id="icon-close" viewBox="0 0 95.08 95.09"><path d="M58.31 47.47l34.58-34.58a7.63 7.63 0 0 0 0-10.69 7.63 7.63 0 0 0-10.69 0L47.62 36.78 13 2.19a7.63 7.63 0 0 0-10.69 0 7.63 7.63 0 0 0 0 10.69l34.6 34.6L2.33 82.07a7.29 7.29 0 0 0 0 10.69 7.63 7.63 0 0 0 10.69 0l34.6-34.6 34.6 34.6a7.27 7.27 0 0 0 10.68 0 7.63 7.63 0 0 0 0-10.69z"/></symbol>
+<symbol id="icon-globe" viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zM2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+<symbol id="icon-itunes" viewBox="0 0 171.75 171.75"><path d="M85.88 0a85.88 85.88 0 1 0 85.87 85.88A85.88 85.88 0 0 0 85.88 0zm38.52 24.27a3.64 3.64 0 0 1 3.67 2.81c.18.62.22 12 .18 45.45l-.07 44.61-.46 1.67a15.89 15.89 0 0 1-11 11.32c-3.88 1.16-9.57 1.6-12.36.94a12.2 12.2 0 0 1-6.26-3.61 12.82 12.82 0 0 1-4.14-9.6 12.4 12.4 0 0 1 1.37-5.81 12.67 12.67 0 0 1 6.53-6.44c2.64-1.32 5-2 11.88-3.44 4.52-1 5.62-1.35 6.5-2.4 1.21-1.44 1.19-.91 1.13-23.74-.06-19.83-.08-20.92-.44-21.47a2.86 2.86 0 0 0-2.83-1.07c-1.25.18-45.76 9.18-46.87 9.48a3.37 3.37 0 0 0-2.41 2.65c-.17.79-.24 9.55-.24 31.1 0 33.1 0 32.35-1.3 35.86a19.24 19.24 0 0 1-1.5 3.08 18.11 18.11 0 0 1-5 4.85c-4.06 2.4-12 3.64-16.25 2.53a13.17 13.17 0 0 1-9.35-8.56 16.44 16.44 0 0 1-.38-7.75 13.11 13.11 0 0 1 3.41-6.32c2.91-2.92 6.36-4.29 15.63-6.17 2-.41 4.07-.89 4.59-1.06a5.31 5.31 0 0 0 2.84-2.69c.35-.79.38-2.71.48-35.78l.1-34.95.49-1a5.88 5.88 0 0 1 3-2.73c.79-.3 47-9.72 54.86-11.18a37.21 37.21 0 0 1 4.2-.58z"/></symbol>
+<symbol id="icon-link" viewBox="0 0 100 58.84"><title>icon-link</title><path d="M78.47 48H49.21a10.66 10.66 0 0 1-9-4.91h10.58A21.57 21.57 0 0 0 71.7 26.64h6.76a10.67 10.67 0 0 1 0 21.33zm-67.6-26.47a10.67 10.67 0 0 1 10.67-10.66H50.8A10.59 10.59 0 0 1 58.34 14a10.94 10.94 0 0 1 1.43 1.79H49.21a21.57 21.57 0 0 0-20.92 16.4h-6.76a10.67 10.67 0 0 1-10.66-10.66zm39.92 10.66H39.86a10.68 10.68 0 0 1 9.35-5.54h10.93a10.67 10.67 0 0 1-9.35 5.54zM100 37.31a21.53 21.53 0 0 0-21.53-21.53h-6.92A21.53 21.53 0 0 0 50.8 0H21.54a21.53 21.53 0 0 0 0 43.06h6.83v-.31A21.41 21.41 0 0 0 34 52.53a21.4 21.4 0 0 0 15.2 6.31h29.26A21.56 21.56 0 0 0 100 37.31z"/></symbol>
+<symbol id="icon-logo-star" viewBox="0 0 362.62 388.52"><title>icon-logo-star</title><path d="M156.58 239l-88.3 64.75c-10.59 7.06-18.84 11.77-29.43 11.77-21.19 0-38.85-18.84-38.85-40 0-17.69 14.13-30.64 27.08-36.52l103.6-44.74-103.6-45.92C13 142.46 0 129.51 0 111.85 0 90.66 18.84 73 40 73c10.6 0 17.66 3.53 28.25 11.77l88.3 64.75-11.74-104.78C141.28 20 157.76 0 181.31 0s40 18.84 36.5 43.56L206 149.52l88.3-64.75C304.93 76.53 313.17 73 323.77 73a39.2 39.2 0 0 1 38.85 38.85c0 18.84-12.95 30.61-27.08 36.5l-103.61 45.91L335.54 239c14.13 5.88 27.08 18.83 27.08 37.67 0 21.19-18.84 38.85-40 38.85-9.42 0-17.66-4.71-28.26-11.77L206 239l11.77 104.78c3.53 24.72-12.95 44.74-36.5 44.74s-40-18.84-36.5-43.56z"/></symbol>
+<symbol id="icon-nav-almanac" viewBox="0 0 36 40"><path d="M31 39H9V1h22c2.2 0 4 1.8 4 4v30c0 2.2-1.8 4-4 4zM9 1H1v38h8V1zM2 10h7M2 14h7"/><path d="M28 16l-4-4-4 4V1h8v15z"/></symbol>
+<symbol id="icon-nav-articles" viewBox="0 0 40 40"><path d="M24.9 6H9.1C7.9 6 7 6.9 7 8.1V16c0 1.2.9 2.1 2.1 2.1h15.8c1.2 0 2.1-.9 2.1-2.1V8.1c0-1.2-.9-2.1-2.1-2.1z"/><path d="M33.2 4H37c1.1 0 2 .9 2 2v29.2c0 2.1-1.7 3.8-3.8 3.8H4.8C2.7 39 1 37.3 1 35.2V4.8C1 2.7 2.7 1 4.8 1H29c2.2 0 4 1.8 4 4v28c0 1.7 1.3 3 3 3s3-1.3 3-3V9M7 23h20M7 28h20M7 33h20"/></symbol>
+<symbol id="icon-nav-guides" viewBox="0 0 40 40"><g clip-path="url(#a)"><path d="M6.2 37.4L14 35V1L3.8 4.1C2.1 4.7 1 6.2 1 7.9v25.7c0 2.7 2.6 4.6 5.2 3.8zM26 39l10.2-3.1c1.7-.5 2.8-2.1 2.8-3.8V5c0-2.7-2.6-4.6-5.1-3.8L26 3.6V39zM14 1l12 3M14 35l12 4"/></g></symbol>
+<symbol id="icon-nav-jobs" viewBox="0 0 40 40"><g clip-path="url(#a)"><path d="M39 23l-19 4-19-4V12c0-2.2 1.8-4 4-4h30c2.2 0 4 1.8 4 4v11z"/><path d="M38 24v11c0 2.2-1.8 4-4 4H6c-2.2 0-4-1.8-4-4V24M32 8H7V5c0-2.2 1.8-4 4-4h17c2.2 0 4 1.8 4 4v3z"/><path d="M15 27c0 2.75 2.25 5 5 5s5-2.25 5-5"/></g></symbol>
+<symbol id="icon-nav-newsletter" viewBox="0 0 40 40"><g clip-path="url(#a)"><path d="M35 39H5c-2.2 0-4-1.8-4-4V19l19 9 19-9v16c0 2.2-1.8 4-4 4zM2 38l12-13M38 38L26 25M33.2 15l5.8 4M1 19l5.8-4"/><path d="M7 22V5c0-2.2 1.8-4 4-4h18c2.2 0 4 1.8 4 4v17"/><path d="M26 13c0 3.3-2.7 6-6 6s-6-2.7-6-6"/></g></symbol>
+<symbol id="icon-nav-snippets" viewBox="0 0 40 40"><g clip-path="url(#a)"><path d="M17.2 37.8l-15-15c-1.6-1.6-1.6-4.1 0-5.7l15-15c1.6-1.6 4.1-1.6 5.7 0l15 15c1.6 1.6 1.6 4.1 0 5.7l-15 15c-1.6 1.6-4.2 1.6-5.7 0z"/><path d="M14 16l-4 4 4 4M26 24l4-4-4-4M21 16l-2 8"/></g></symbol>
+<symbol id="icon-nav-videos" viewBox="0 0 40 40"><g clip-path="url(#a)"><path d="M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z"/><path d="M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z"/><path d="M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z"/></g></symbol>
+<symbol id="icon-pin" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.727 2A4.727 4.727 0 0 0 4 6.727c0 1.826 1.198 3.65 2.59 5.12a18.357 18.357 0 0 0 2.137 1.917 18.36 18.36 0 0 0 2.138-1.918c1.392-1.469 2.59-3.293 2.59-5.119A4.727 4.727 0 0 0 8.726 2zm0 13l-.555.832-.002-.002-.005-.003-.016-.01a6.814 6.814 0 0 1-.253-.18 20.364 20.364 0 0 1-2.758-2.416C3.666 11.669 2 9.357 2 6.728a6.727 6.727 0 1 1 13.454 0c0 2.63-1.665 4.941-3.137 6.495a20.366 20.366 0 0 1-2.956 2.556 6.845 6.845 0 0 1-.055.038l-.016.01-.005.004-.002.001s-.001.001-.556-.831zm0 0l.555.832a1 1 0 0 1-1.11 0L8.727 15z"/><path d="M8.727 8.637a1.91 1.91 0 1 0 0-3.819 1.91 1.91 0 0 0 0 3.819z"/></symbol>
+<symbol id="icon-play" viewBox="0 0 32 32"><path clip-rule="evenodd" d="M27.25 16c0 6.213-5.037 11.25-11.25 11.25S4.75 22.213 4.75 16 9.787 4.75 16 4.75 27.25 9.787 27.25 16zM16 31c8.284 0 15-6.716 15-15 0-8.284-6.716-15-15-15C7.716 1 1 7.716 1 16c0 8.284 6.716 15 15 15zm-1.657-19.744c-1.002-.668-2.343.05-2.343 1.253v7.63c0 1.204 1.341 1.922 2.343 1.254l5.722-3.815a1.507 1.507 0 0 0 0-2.508l-5.722-3.814z"/></symbol>
+<symbol id="icon-search" viewBox="0 0 100 100"><title>icon-search</title><path d="M80.65 66.78a33.55 33.55 0 0 1-47.44-47.44 33.55 33.55 0 1 1 47.44 47.44zm6.73-54.16a43.06 43.06 0 0 0-65.32 55.71L2 88.39A6.8 6.8 0 0 0 11.61 98l20.06-20.06a43.06 43.06 0 0 0 55.71-65.32z"/></symbol>
+<symbol id="icon-star" viewBox="0 0 100 95.52"><title>icon-star</title><g data-name="Layer 2"><path d="M64.19 28.77a5.17 5.17 0 0 0 3.9 2.83s29.27-3 31.74 4.61-23 22.39-23 22.39a5.17 5.17 0 0 0-1.49 4.58s11.91 26.9 5.42 31.61S52.4 79.87 52.4 79.87a5.21 5.21 0 0 0-2.41-.6 5.14 5.14 0 0 0-2.41.6S25.68 99.5 19.2 94.79s5.42-31.61 5.42-31.61a5.18 5.18 0 0 0-1.49-4.58S-2.31 43.83.17 36.21s31.74-4.61 31.74-4.61a5.19 5.19 0 0 0 3.9-2.83S42 0 50 0s14.19 28.77 14.19 28.77z" data-name="Layer 1"/></g></symbol>
+<symbol id="logo-facebook" viewBox="0 0 16 16"><path d="M5.667 16h3.2V7.933h2.266L11.4 5.2H8.867V3.667C8.867 3 9 2.8 9.6 2.8h1.733V0h-2.2c-2.4 0-3.466 1.067-3.466 3.067V5.2H4v2.733h1.667V16z"/></symbol>
+<symbol id="logo-rss" viewBox="0 0 16 16"><path d="M0 0v3.2c3.4 0 6.6 1.333 9 3.733 2.4 2.4 3.733 5.6 3.733 9.067H16C16 7.2 8.8 0 0 0zM2.2 11.666c-1.2 0-2.2 1-2.2 2.2C0 15.066 1 16 2.2 16c1.2 0 2.2-1 2.2-2.2-.067-1.134-1.067-2.134-2.2-2.134z"/><path d="M0 5.467v3.2C4.067 8.733 7.333 12 7.333 16h3.2C10.533 10.2 5.8 5.533 0 5.467z"/></symbol>
+<symbol id="logo-spectrum" viewBox="0 0 32 32"><path d="M6 14.5A1.5 1.5 0 0 0 7.5 16H9a7 7 0 0 1 7 7v1.5a1.5 1.5 0 0 0 1.5 1.5h7a1.5 1.5 0 0 0 1.5-1.5V23c0-9.389-7.611-17-17-17H7.5A1.5 1.5 0 0 0 6 7.5v7z"/></symbol>
+<symbol id="logo-twitter" viewBox="0 0 16 16"><path d="M0 12.867a9.332 9.332 0 0 0 5 1.466c6.067 0 9.533-5.133 9.333-9.733.667-.466 1.2-1.066 1.667-1.666-.6.266-1.2.466-1.867.533a3.55 3.55 0 0 0 1.467-1.8c-.667.4-1.333.666-2.067.8-.666-.734-1.533-1.134-2.466-1.134-2.134 0-3.667 2-3.2 4-2.734-.133-5.134-1.4-6.734-3.4a3.299 3.299 0 0 0 1 4.4c-.533-.066-1.066-.2-1.466-.4C.6 7.468 1.733 8.867 3.267 9.2c-.467.134-1 .134-1.467.067a3.16 3.16 0 0 0 3.067 2.267A6.726 6.726 0 0 1 0 12.867z"/></symbol>
+<symbol id="logo-youtube" viewBox="0 0 16 16"><path d="M15.667 4.4c-.2-.667-.734-1.267-1.4-1.4C13 2.667 8 2.667 8 2.667s-5 0-6.267.333c-.666.2-1.2.733-1.4 1.4C0 5.666 0 8.333 0 8.333s0 2.6.333 3.867c.2.667.734 1.267 1.4 1.4C3 13.933 8 13.933 8 13.933s5 0 6.267-.333c.666-.2 1.2-.733 1.4-1.4C16 10.933 16 8.333 16 8.333s0-2.667-.333-3.933zm-9.334 6.266V5.933l4.2 2.4-4.2 2.333z"/></symbol>
+<symbol id="logo" viewBox="0 0 474.15 58.26"><path d="M46 42.57a4.5 4.5 0 0 0-3 1.13c-4.1 3.46-8.13 5.39-14.08 5.39-10.78 0-18.58-8.93-18.58-20V29c0-11 7.88-19.87 18.58-19.87a20.42 20.42 0 0 1 13.48 5.03 4.95 4.95 0 0 0 7.88-3.86 4.94 4.94 0 0 0-1.93-3.94C43.44 2.57 37.73 0 29 0 12 0 0 13.12 0 29.13v.16c0 16.17 12.23 29 28.64 29 9.09 0 15.12-2.9 20.43-7.56a4.76 4.76 0 0 0 1.61-3.54A4.71 4.71 0 0 0 46 42.57zm36.86-17.95C72 22 69.43 20.12 69.43 15.77v-.16c0-3.7 3.38-6.68 9.17-6.68 4.43 0 8.61 1.45 13 4.26a4.78 4.78 0 0 0 2.57.72 4.6 4.6 0 0 0 4.67-4.59 4.47 4.47 0 0 0-2.17-3.94A31 31 0 0 0 78.76.16C67.58.16 59.53 6.84 59.53 16.5v.16c0 10.38 6.76 13.92 18.74 16.82C88.73 35.89 91 38.06 91 42.08v.16c0 4.18-3.86 7.08-10 7.08a24.42 24.42 0 0 1-15.77-5.79 4.79 4.79 0 0 0-7.56 3.7A4.64 4.64 0 0 0 59.61 51a35.05 35.05 0 0 0 21.16 7.1c11.83 0 20.11-6.28 20.11-16.82v-.16c0-9.34-6.11-13.6-18.02-16.5zm49.88 0c-10.86-2.57-13.43-4.51-13.43-8.85v-.16c0-3.7 3.38-6.68 9.17-6.68 4.42 0 8.61 1.45 13 4.26a4.78 4.78 0 0 0 2.57.72 4.6 4.6 0 0 0 4.67-4.59 4.47 4.47 0 0 0-2.17-3.94A31 31 0 0 0 128.64.16c-11.18 0-19.23 6.68-19.23 16.33v.16c0 10.38 6.76 13.92 18.74 16.82 10.46 2.41 12.71 4.59 12.71 8.61v.16c0 4.18-3.86 7.08-10 7.08a24.42 24.42 0 0 1-15.77-5.79 4.79 4.79 0 0 0-7.56 3.7 4.64 4.64 0 0 0 1.96 3.77 35.05 35.05 0 0 0 21.16 7.08c11.83 0 20.11-6.28 20.11-16.82v-.16c0-9.32-6.11-13.58-18.02-16.48zm45.62 3.22h-15.13a4.79 4.79 0 0 0 0 9.58h15.12a4.79 4.79 0 0 0 0-9.58zM224 1h-37.45a4.59 4.59 0 0 0 0 9.17h13.68v42.62a5 5 0 0 0 10 0V10.14H224A4.59 4.59 0 0 0 224 1zm38.86 0h-20.15a4.91 4.91 0 0 0-5 5v46.79a4.95 4.95 0 0 0 9.89 0V37.66h12.47l13.68 17.46a5.65 5.65 0 0 0 4.83 2.58 4.67 4.67 0 0 0 4.75-4.59 5.74 5.74 0 0 0-1.61-3.78l-10.78-13.6c7.56-2.33 12.79-7.81 12.79-16.82v-.16a17 17 0 0 0-4.66-12.15C275.45 3.06 269.9 1 262.82 1zm10.86 18.51c0 5.71-4.51 9.41-11.58 9.41h-14.53V10H262c7.32 0 11.67 3.3 11.67 9.33zm27-18.91a4.89 4.89 0 0 0-5 4.91v47.28a4.95 4.95 0 0 0 9.89 0V5.47a4.88 4.88 0 0 0-4.98-4.91zm62.67 42a4.5 4.5 0 0 0-3 1.13c-4.1 3.46-8.13 5.39-14.08 5.39-10.78 0-18.58-8.93-18.58-20V29c0-11 7.88-19.87 18.58-19.87a20.42 20.42 0 0 1 13.44 5.07 4.95 4.95 0 0 0 7.88-3.86 4.94 4.94 0 0 0-1.93-3.94C360.72 2.57 355 0 346.32 0c-17.06 0-29 13.12-29 29.13v.16c0 16.17 12.23 29 28.64 29 9.09 0 15.12-2.9 20.43-7.56a4.76 4.76 0 0 0 1.61-3.58 4.71 4.71 0 0 0-4.7-4.58zm41-16.82l17.54-16.9a4.81 4.81 0 0 0 1.77-3.7A4.53 4.53 0 0 0 419 .56a5.2 5.2 0 0 0-4.1 1.85l-26.66 26.88V5.47a4.95 4.95 0 0 0-9.9 0v47.32a4.95 4.95 0 0 0 9.9 0V41.12l9.17-8.85 18.1 23.09a5 5 0 0 0 4.18 2.33 4.83 4.83 0 0 0 5-4.83 5.36 5.36 0 0 0-1.37-3.54zm51.8-1.13c-10.92-2.65-13.49-4.53-13.49-8.88v-.16c0-3.7 3.38-6.68 9.17-6.68 4.42 0 8.61 1.45 13 4.26a4.78 4.78 0 0 0 2.57.72 4.6 4.6 0 0 0 4.67-4.59 4.47 4.47 0 0 0-2.17-3.94A31 31 0 0 0 452 .16c-11.15 0-19.2 6.68-19.2 16.34v.16c0 10.38 6.76 13.92 18.74 16.82 10.46 2.41 12.71 4.59 12.71 8.61v.16c0 4.18-3.86 7.08-10 7.08a24.42 24.42 0 0 1-15.77-5.79 4.79 4.79 0 0 0-7.56 3.7 4.64 4.64 0 0 0 1.96 3.76A35.05 35.05 0 0 0 454 58.1c11.83 0 20.11-6.28 20.11-16.82v-.16c.04-9.34-6.11-13.6-17.98-16.5z"/></symbol>
+</svg>
+  <svg width="0" height="0" class="visually-hidden">
+    <defs>
+
+      <linearGradient id="orange-to-pink" x1="1" x2="0" y1="1" y2="0">
+        <stop offset="0%" stop-color="#DA1B60" />
+        <stop offset="100%" stop-color="#ff8a00" />
+      </linearGradient>
+
+      <filter id="duotone_orange_pink">
+        <feColorMatrix type="matrix" result="grayscale"
+          values="1 0 0 0 0
+                  1 0 0 0 0
+                  1 0 0 0 0
+                  0 0 0 1 0" >
+        </feColorMatrix>
+        <feComponentTransfer color-interpolation-filters="sRGB" result="duotone">
+          <feFuncR type="table" tableValues="0.7411764706 0.9882352941"></feFuncR>
+          <feFuncG type="table" tableValues="0.0431372549 0.7333333333"></feFuncG>
+          <feFuncB type="table" tableValues="0.568627451 0.05098039216"></feFuncB>
+          <feFuncA type="table" tableValues="0 1"></feFuncA>
+        </feComponentTransfer> 
+      </filter> 
+
+    </defs>
+  </svg>
+
+  
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/css-tricks.com\/snippets\/html\/html5-page-structure\/":3848};
+	</script>
+				<script type='text/javascript'>
+/* <![CDATA[ */
+var bblpAJAX = {"ajaxurl":"https:\/\/css-tricks.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script  src='https://css-tricks.com/wp-content/plugins/bbpress-live-preview-css-tricks/includes/assets/js/scripts.min.js?ver=1.0.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pollsL10n = {"ajax_url":"https:\/\/css-tricks.com\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"0","show_fading":"1"};
+/* ]]> */
+</script>
+<script  src='https://css-tricks.com/wp-content/plugins/wp-polls/polls-js.js?ver=2.75.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var markdownify = {"ajax_url":"\/wp-admin\/admin-ajax.php","nonce":"b35ce1d8f4"};
+/* ]]> */
+</script>
+<script  src='https://css-tricks.com/wp-content/plugins/jetpack-markdown-live-preview-comments/js/markdownify.js?ver=1'></script>
+<script  src='https://css-tricks.com/wp-includes/js/comment-reply.min.js?ver=5.1.1'></script>
+<script  src='https://css-tricks.com/wp-content/plugins/jetpack/modules/widgets/search/js/search-widget.js?ver=7.1.1'></script>
+<script  src='https://css-tricks.com/wp-includes/js/wp-embed.min.js?ver=5.1.1'></script>
+<script async="async"  src='https://css-tricks.com/wp-content/plugins/akismet/_inc/form.js?ver=4.1.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+</script>
+<script  src='https://css-tricks.com/wp-content/plugins/jetpack/_inc/build/sharedaddy/sharing.min.js?ver=7.1.1'></script>
+<script >
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+</script>
+<script type='text/javascript' src='https://stats.wp.com/e-201913.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:7.1.1',blog:'45537868',post:'3848',tz:'-7',srv:'css-tricks.com'} ]);
+	_stq.push([ 'clickTrackerInit', '45537868', '3848' ]);
+</script>
+
+  
+<script src="https://css-tricks.com/wp-content/themes/CSS-Tricks-17/js/min/global-concat.min.js?v=3.1">
+</script>
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-68528-29', 'auto');
+
+  if (typeof articleYear !== "undefined") {
+    ga('set', 'dimension1', articleYear);
+  }
+  if (typeof articleAuthor !== "undefined") {
+    ga('set', 'dimension2', articleAuthor);
+  }
+  if (typeof articleType !== "undefined") {
+    ga('set', 'dimension3', articleType);
+  }
+
+  ga('send', 'pageview');
+</script>
+
+  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+</body>
+
+</html>
